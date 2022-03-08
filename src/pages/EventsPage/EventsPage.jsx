@@ -4,6 +4,8 @@ import eventService from "../../services/event.service"
 import EventForm from "../../components/Events/EventForm"
 import EventList from '../../components/Events/EventList'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
+import { AuthContext } from '../../context/auth.context'
+
 
 const EventsPage = () => {
 
