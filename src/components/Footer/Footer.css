@@ -1,0 +1,14 @@
+footer {
+    background-color: #f8f9fa;
+    color: black;
+    font-size: .6em;
+    text-align: center;
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contFooter {
+    margin-top: 40px;
+}
