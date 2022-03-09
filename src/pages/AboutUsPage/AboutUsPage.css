@@ -1,8 +1,42 @@
-.imagesAbout {
-    margin-top: 80px;
-    height: 300px;
+.aboutCointainer {
+    margin-top: 40px;
 }
 
-.aboutUs {
-    padding: 0px 100px;
+.image {
+    height: 350px;
+    margin-top: 20px;
+}
+
+.images2 {
+    height: 350px;
+    margin-top: 20px;
+    padding-right: 20px!important;
+}
+
+h5{
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+
+.logo {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.firstPara > p {
+    font-display: flex;
+    text-align: center;
+    font-weight: 300;
+}
+
+.firstPara {
+    margin-bottom: 40px;
+}
+
+.planes {
+    margin: 20px 0;
+    height: 280px;
 }

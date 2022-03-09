@@ -1,0 +1,32 @@
+.container-projects {
+    margin: 40px;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.photoplane {
+    margin-bottom: 20px;
+}
+
+article {
+    margin: 40px 0;
+}
+
+.relato {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.arreglo {
+    height: 250px;
+}
+
+section {
+    margin:20px;
+}
+
+.simulador {
+    height: 400px;
+}

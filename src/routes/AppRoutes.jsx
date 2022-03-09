@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
+import WhatIsPage from "../pages/WhatIsPage/WhatIsPage"
 import ContactPage from "../pages/ContactPage/ContactPage"
 import IndexPage from '../pages/IndexPage/IndexPage'
 import ProfilePage from "../pages/ProfilePage/ProfilePage"
@@ -15,6 +15,7 @@ import EventsEdit from "../pages/EventsPage/EventsEdit"
 import ProjectsPage from "../pages/ProjectPage/ProjectsPage"
 import UsersListPage from "../pages/UserListPage/UserListPage"
 import PayPage from "../pages/PayPage/PayPage"
+import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
 
 
 const AppRoutes = () => {
@@ -22,7 +23,7 @@ const AppRoutes = () => {
         <Routes>
 
             <Route path="/" element={<IndexPage />} />
-            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/what-is" element={<WhatIsPage />} />
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
 
@@ -49,7 +50,7 @@ const AppRoutes = () => {
                 <Route path="" element={<UsersListPage />} />
                 <Route path=":user_id/edit" element={<EditProfileForm />} />
             </Route>
-
+            <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="*" element={<h1>404</h1>} />
 
         </Routes>

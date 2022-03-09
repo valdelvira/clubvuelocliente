@@ -25,8 +25,8 @@ const Navigation = () => {
                     </NavLink>
                     <Nav>
                         <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
-                            <NavLink to="/about-us">
-                                <NavDropdown.Item as="span">Quiénes somos</NavDropdown.Item>
+                            <NavLink to="/what-is">
+                                <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>
                             </NavLink>
                             <NavLink to="/projects">
                                 <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>
@@ -54,12 +54,12 @@ const Navigation = () => {
                             <Nav.Link as="span" >Eventos</Nav.Link>
                         </NavLink>
                         {
-                            user?.role ==='ADMIN' ?
+                            user?.role === 'ADMIN' ?
 
                                 <NavLink to="/profile">
                                     <Nav.Link as="span" >Usuarios</Nav.Link>
                                 </NavLink>
-                            :
+                                :
                                 null
                         }
 

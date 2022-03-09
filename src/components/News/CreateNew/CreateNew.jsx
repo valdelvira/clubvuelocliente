@@ -3,7 +3,7 @@ import { useState } from 'react'
 import newsService from '../../../services/news.service'
 import uploadService from '../../../services/upload.service'
 
-function CreateNew() {
+function CreateNew({ refreshNews, closeModal }) {
 
     const [loadingImage, setLoadingImage] = useState(false)
 
@@ -39,7 +39,10 @@ function CreateNew() {
         e.preventDefault()
         newsService
             .contact(newsForm)
-            .then(res => console.log(res))
+            .then(res => {
+                refreshNews()
+                console.log(res)
+            })
             .catch(err => console.log(err))
     }
 
