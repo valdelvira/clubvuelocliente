@@ -1,9 +1,8 @@
-import { Container, Modal, Row } from 'react-bootstrap'
+import { Button, Container, Modal, Row, Col } from 'react-bootstrap'
 import CreateNew from '../../components/News/CreateNew/CreateNew'
 import newsServices from '../../services/news.service'
-import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import NewsList from '../../components/News/NewsList/NewsList'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner' 
 
@@ -26,10 +25,15 @@ function ListNews() {
     }
     return (
         <>
-            <Container>
-                <h1>Noticias {
-                    isLoggedIn && <span onClick={handleModalOpen}>+ Crear noticia</span>
-                }</h1>
+            <Container className="mt-4">
+                <Row className=" mb-5 justify-content-space-between">
+                    <Col md={8}>
+                        <h1>Noticias</h1>
+                    </Col>
+                    <Col md="auto">
+                        { user?.role === 'ADMIN' && <Button  className="justify-content-end" onClick={ handleModalOpen }>+ Crear noticia</Button> }
+                    </Col>
+                </Row>
                 <Row>
                     { !news.length ? <LoadingSpinner /> : <NewsList news={news} />}
                 </Row>

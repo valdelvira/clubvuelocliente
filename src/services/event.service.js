@@ -39,6 +39,10 @@ class EventService {
     joinEvent(id) {
         return this.api.put(`/${id}/join`)
     }
+
+    quitEvent(id) {
+        return this.api.put(`/${id}/quit`)
+    }
 }
 
 const eventService = new EventService()

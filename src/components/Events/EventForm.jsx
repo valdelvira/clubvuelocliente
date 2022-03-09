@@ -2,7 +2,6 @@ import { useState, useContext } from "react"
 import { Form, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import eventService from "../../services/event.service"
-import { MessageContext } from "../../context/userMessage.context"
 import uploadService from "../../services/upload.service"
 
 const EventForm = ({ closeModal, refreshEvents }) => {
@@ -22,9 +21,6 @@ const EventForm = ({ closeModal, refreshEvents }) => {
     }
 
     const navigate = useNavigate()
-
-    const { setMessageInfo, setShowMessage } = useContext(MessageContext)
-
     const [loadingImage, setLoadingImage] = useState(false)
 
     const uploadEventImage = e => {
@@ -54,9 +50,6 @@ const EventForm = ({ closeModal, refreshEvents }) => {
                 navigate('/events')
                 refreshEvents()
                 closeModal()
-                setShowMessage(true)
-                setMessageInfo({ title: 'Exito', desc: 'Evento creado correctamente' })
-
             })
             .catch(err => console.log('Error de creacion de eventos', err))
     }

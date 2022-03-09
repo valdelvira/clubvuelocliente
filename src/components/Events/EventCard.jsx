@@ -1,15 +1,15 @@
-import { Card, Button, Col, Modal } from "react-bootstrap"
+import { Card, Button, Col, Modal, Stack, Container } from "react-bootstrap"
 import { useState, useContext, useEffect } from "react"
 import '../../pages/EventsPage/EventsPage.css'
 import eventService from "../../services/event.service"
 import { AuthContext } from "../../context/auth.context"
 import { Navigate, Link } from 'react-router-dom'
+import './EventCard.css'
 
 
 const EventCard = ({ title, description, imgURL, participants, _id, refreshEvents }) => {
-
     const [showModal, setShowModal] = useState(false)
-    const [event, setEvent] = useState([])
+    const [isParticipant, setIsParticipant] = useState(false)
 
     const { isLoggedIn, user } = useContext(AuthContext)
 
@@ -36,11 +36,19 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
             })
             .catch(err => console.log(err))
     }
-
+    const popEvent = () => {
+        eventService
+            .quitEvent(_id)
+            .then(() => {
+                handleModalClose()
+                refreshEvents()
+            })
+            .catch(err => console.log(err))
+    }
 
     return (
         <>
-            <Col>
+            <Col key={_id}>
                 <Card className='EventCard' style={{ width: '18rem' }}>
                     <Card.Img src={imgURL} />
                     <Card.Body>
@@ -54,40 +62,47 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
             </Col>
             <Modal show={showModal} onHide={handleModalClose} size="lg" >
 
+                    <Container>
                 <Modal.Title>Detalles del evento</Modal.Title>
 
                 <Modal.Body>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '20 rem' }}>
                         <Card.Img src={imgURL} />
                         <Card.Body>
                             <Card.Title>{title}</Card.Title>
                             <Card.Text>
                                 {description}
-                                <p>Listado de participantes</p>
+                                <h5>Listado de participantes</h5>
                                 {
-                                    participants.map(elem => {
-                                        return (<>
-                                            <p key={elem.username}>{elem.username}</p>
-                                            <Button variant="primary" onClick={joinEvent} key={elem.username}>Borrar participante </Button>
-                                        </>)
+                                    participants?.map(elem => {
+                                        return (
+                                            <span key={elem._id} className="participantCard">
+                                                <img src={elem.imageURL} className="userPhoto" alt="user image"/>
+                                                <span key={elem._id}>{elem.name} {elem.name}</span>
+                                                {
+                                                elem.isParticipant ? 
+                                                    <Button variant="primary" onClick={popEvent}>Anular </Button>
+                                                :
+                                                    <Button variant="primary" onClick={joinEvent}>Unirse </Button>
+                                                }
+                                                { user?.role === 'ADMIN' && <Button variant="primary" onClick={joinEvent} key={elem.username}>Borrar participante </Button>}
+                                            </span>
+                                        )
                                     })
                                 }
+                                <Button variant="primary" onClick={joinEvent}>Unirse </Button>
                             </Card.Text>
-
-
-
-                            {user?.role === 'ADMIN' && <Button variant="warning" onClick={deleteEvent}>Borrar</Button>}
-
-
-                            <Button variant="primary" onClick={joinEvent}>Unirse </Button>
-
-
+                            <Stack gap={3}>
+                            { user?.role === 'ADMIN' && <Button variant="danger" onClick={deleteEvent}>Borrar evento</Button> }
                             <Link to={`/events/${_id}/edit`}>
+                                {isParticipant}
                                 <Button variant="warning">Editar </Button>
                             </Link>
+                            </Stack>
                         </Card.Body >
                     </Card >
                 </Modal.Body >
+                    </Container>
 
             </Modal >
         </>

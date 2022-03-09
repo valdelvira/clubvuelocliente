@@ -96,7 +96,7 @@ const SignUpForm = () => {
 
                 <Form.Group className="mb-3">
                     <Form.Label>Horas de vuelo</Form.Label>
-                    <Form.Control type="text" name="flightHours" value={signUpForm.flightHours} onChange={handleInputChange} />
+                    <Form.Control type="number" name="flightHours" value={signUpForm.flightHours} onChange={handleInputChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">

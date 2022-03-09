@@ -29,7 +29,13 @@ class ProfileService {
     }
 
     editProfile = (id, profileForm) => {
+
         return this.api.put(`/profile/${id}/edit`, profileForm)
+    }
+
+    editRoleProfile = (id, roleForm) => {
+
+        return this.api.put(`/profile/${id}/role`, roleForm)
     }
 
 

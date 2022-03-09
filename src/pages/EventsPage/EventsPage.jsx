@@ -1,5 +1,5 @@
-import { Row, Container, Button, Modal } from "react-bootstrap"
-import { useEffect, useState } from "react"
+import { Row, Container, Modal, Button, Col } from "react-bootstrap"
+import { useEffect, useState, useContext } from "react"
 import eventService from "../../services/event.service"
 import EventForm from "../../components/Events/EventForm"
 import EventList from '../../components/Events/EventList'
@@ -12,9 +12,9 @@ const EventsPage = () => {
     const [events, setEvents] = useState([])
     const [showModal, setShowModal] = useState(false)
 
+    const { user } = useContext(AuthContext)
     const handleModalFormClose = () => setShowModal(false)
     const handleModalFormOpen = () => setShowModal(true)
-
 
     useEffect(() => {
         loadEvents()
@@ -28,9 +28,15 @@ const EventsPage = () => {
     }
 
     return (
-        <Container>
-            <h1>Eventos</h1>
-            <Button onClick={handleModalFormOpen}> Crear evento</Button>
+        <Container className="mt-4">
+            <Row className=" mb-5 justify-content-space-between">
+                <Col md={8}>
+                    <h1>Eventos</h1>
+                </Col>
+                <Col md="auto">
+                    { user?.role === 'ADMIN' && <Button  className="justify-content-end" onClick={handleModalFormOpen}>+ Crear evento</Button> }
+                </Col>
+            </Row>
             <Row>
                 { !events.length ? <LoadingSpinner /> : <EventList events={events} refreshEvents={loadEvents} />}
             </Row>

@@ -1,8 +1,7 @@
 import { useState, useContext } from "react"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Alert, Stack } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import authService from "../../services/auth.service"
-import { MessageContext } from "../../context/userMessage.context"
 import { AuthContext } from './../../context/auth.context'
 
 const LoginForm = ({ closeModal }) => {
@@ -12,8 +11,8 @@ const LoginForm = ({ closeModal }) => {
         password: ""
     })
 
-    const { setMessageInfo, setShowMessage } = useContext(MessageContext)
     const { storeToken, authenticateUser } = useContext(AuthContext)
+    const [show, setShow] = useState(false)
 
     const navigate = useNavigate()
 
@@ -36,11 +35,11 @@ const LoginForm = ({ closeModal }) => {
                 authenticateUser()
                 navigate('/')
                 closeModal()
-                setShowMessage(true)
-                setMessageInfo({ title: 'Exito', desc: 'Has iniciado sesión correctamente!' })
-
             })
-            .catch(err => console.log('Error en inicio sesion', err))
+            .catch(err => {
+                setShow(true)
+                console.log('Error en inicio sesion', err)
+            })
     }
 
     return (
@@ -54,9 +53,12 @@ const LoginForm = ({ closeModal }) => {
                 <Form.Label>Contraseña</Form.Label>
                 <Form.Control type="password" name="password" value={LoginForm.password} onChange={handleInputChange} />
             </Form.Group>
-
-            <Button variant="dark" type="submit" style={{ width: '100%' }}>Acceder</Button>
-
+            <Stack gap={4}>
+                <Button variant="dark" type="submit" style={{ width: '100%' }}>Acceder</Button>
+                {
+                    show &&  <Alert variant="danger">Usuario o contraseña incorrecta</Alert>
+                }   
+            </Stack>
         </Form>
     )
 }

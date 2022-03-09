@@ -1,4 +1,4 @@
-import { Card, Button, Col } from 'react-bootstrap'
+import { Card, Button, Col, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import profileService from '../../services/profile.service'
 
@@ -12,12 +12,10 @@ const UserCard = ({ _id, name, lastname, email, refreshProfiles, role }) => {
     }
 
     const changeRole = (id, role) => {
-        const uploadData = new FormData()
-        uploadData.append('role', role)
-        console.log(id, uploadData.name)
+ 
         profileService
-            .editProfile(id, uploadData)
-            .then(() => console.log('done'))
+            .editRoleProfile(id, {role})
+            .then(() => refreshProfiles())
             .catch(err => console.log(err))
     }
 
@@ -29,13 +27,15 @@ const UserCard = ({ _id, name, lastname, email, refreshProfiles, role }) => {
                     <Card.Text>
                         { email } <br/>Tipo de usuario: {role}
                     </Card.Text>
-                        <Button variant="danger" onClick={() => deleteProfile(_id) }>Eliminar</Button>
-                        {
-                            role === 'ADMIN' ?
+                        <Stack gap={3}>
+                            <Button variant="danger" onClick={() => deleteProfile(_id) }>Eliminar</Button>
+                            {
+                                role === 'ADMIN' ?
                                 <Button variant="warning" onClick={() => changeRole(_id,'USER' ) }>Hacer usuario</Button>
-                            :
+                                :
                                 <Button variant="warning" onClick={() => changeRole(_id, 'ADMIN' ) }>Hacer administrador</Button>
-                        }
+                            }
+                        </Stack>
                 </Card.Body>
             </Card>
         </Col>

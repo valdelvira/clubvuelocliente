@@ -14,7 +14,7 @@ const ProfilePage = () => {
 
     useEffect(() => {
         user && loadProfile()
-    }, [user])
+    }, [user, user_id])
 
     const loadProfile = () => {
         profileService

@@ -6,7 +6,7 @@ const UsersList = ({ usersList, refreshProfiles }) => {
         <>
             {
                 usersList.map(user =>
-                    <Col md={4} key={user._id}>
+                    <Col md={4} className="mb-3" key={user._id}>
                         <UserCard {...user} refreshProfiles={refreshProfiles} />
                     </Col>)
             }

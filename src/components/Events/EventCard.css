@@ -1,0 +1,9 @@
+.userPhoto{
+    height: 3.5rem;
+    border-radius: 40%;
+}
+
+.participantCard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

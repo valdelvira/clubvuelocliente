@@ -1,11 +1,9 @@
 import { useState, useEffect, useContext } from 'react'
+import { useParams } from "react-router-dom"
 import { Form, Button } from 'react-bootstrap'
 import profileService from '../../services/profile.service'
 import uploadService from '../../services/upload.service'
 import { AuthContext } from '../../context/auth.context'
-import { useNavigate } from 'react-router-dom'
-
-
 
 
 const EditProfileForm = ({ closeModal, refreshProfile }) => {
@@ -18,8 +16,8 @@ const EditProfileForm = ({ closeModal, refreshProfile }) => {
     })
 
     const { user, isLoading } = useContext(AuthContext)
-    const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
+    const { user_id } = useParams()
 
     useEffect(() => {
         user && loadProfile()
@@ -27,10 +25,8 @@ const EditProfileForm = ({ closeModal, refreshProfile }) => {
 
     const loadProfile = () => {
         profileService
-            .getProfile(user?._id)
-            .then(({ data }) => {
-                setProfileForm(data)
-            })
+            .getProfile(user_id)
+            .then(({ data }) => setProfileForm(data))
             .catch(err => console.log(err))
     }
 
@@ -62,7 +58,7 @@ const EditProfileForm = ({ closeModal, refreshProfile }) => {
 
         e.preventDefault()
         profileService
-            .editProfile(user?._id, profileForm)
+            .editProfile(user_id, profileForm)
             .then(() => {
                 closeModal()
                 refreshProfile()
@@ -80,7 +76,7 @@ const EditProfileForm = ({ closeModal, refreshProfile }) => {
 
             <Form.Group className="mb-3">
                 <Form.Label>Horas de vuelo</Form.Label>
-                <Form.Control type="text" name="flightHours" value={profileForm.flightHours} onChange={handleInputChange} />
+                <Form.Control type="number" name="flightHours" value={profileForm.flightHours} onChange={handleInputChange} />
             </Form.Group>
 
             <Form.Group className="mb-3">
