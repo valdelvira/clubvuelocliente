@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
 import { useState, useEffect } from 'react'
 import NewsList from '../../components/News/NewsList/NewsList'
-import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner' 
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 
 function ListNews() {
     const [news, setNews] = useState([])
@@ -31,7 +31,7 @@ function ListNews() {
                     isLoggedIn && <span onClick={handleModalOpen}>+ Crear noticia</span>
                 }</h1>
                 <Row>
-                    { !news.length ? <LoadingSpinner /> : <NewsList news={news} />}
+                    {!news.length ? <LoadingSpinner /> : <NewsList news={news} />}
                 </Row>
             </Container>
             <Modal show={showModal} onHide={handleModalClose} size="lg">
@@ -39,7 +39,7 @@ function ListNews() {
                     <Modal.Title>Crear noticia</Modal.Title>
                 </Modal.Header >
                 <Modal.Body>
-                    <CreateNew />
+                    <CreateNew refreshNews={loadNews} closeModal={handleModalClose} />
                 </Modal.Body>
             </Modal>
         </>
