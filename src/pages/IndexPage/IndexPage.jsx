@@ -5,6 +5,7 @@ import './IndexPage.css'
 import NewsCard from "../../components/News/NewsCard/NewsCard"
 import Facebook from "../../components/Facebook/Facebook"
 import Twitter from "../../components/Twitter/Twitter"
+import { Link } from "react-router-dom"
 
 import news1 from './img/imgNoticia1.jpeg'
 import news2 from './img/imgNoticia2.jpeg'
