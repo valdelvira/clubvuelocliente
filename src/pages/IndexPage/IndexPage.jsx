@@ -4,6 +4,7 @@ import './IndexPage.css'
 import NewsCard from "../../components/News/NewsCard/NewsCard"
 import Facebook from "../../components/Facebook/Facebook"
 import Twitter from "../../components/Twitter/Twitter"
+import { Link } from "react-router-dom"
 
 const IndexPage = () => {
 
@@ -20,9 +21,11 @@ const IndexPage = () => {
                 </Row>
                 <Row className="d-flex">
                     <Col>
-                        <Button >
-                            Saber más
-                        </Button>
+                        <Link to={'/about-us'}>
+                            <Button >
+                                Saber más
+                            </Button>
+                        </Link>
                     </Col>
                 </Row>
             </section>
