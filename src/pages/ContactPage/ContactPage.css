@@ -1,0 +1,17 @@
+.contactContainer {
+    margin: 40px 0;
+}
+
+.contactContainer h1 {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contactContainer h5 {
+    font-weight: 1000;
+}
+
+.contactContainer .location {
+    font-style: italic;
+}

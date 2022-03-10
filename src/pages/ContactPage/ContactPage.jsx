@@ -1,12 +1,10 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import Map from "../../components/Map/Map"
+import './ContactPage.css'
 
 
 function ContactPage() {
-
-
-
 
     const locationSede = {
         address: 'Plaza del Cardenal Cisneros 3, 28040 (Madrid)',
@@ -21,35 +19,43 @@ function ContactPage() {
     }
 
     return (
-        <Container>
+        <Container className='contactContainer'>
             <Row className="justify-content-md-center">
 
                 <h2>¿Dónde estamos?</h2>
                 <Col md={6}>
                     <section>
-                        Lunes – Viernes
-                        Pza. Cardenal Cisneros, 3, 28040 Madrid
-                        Nuestro local se encuentra en la Escuela Técnica Superior de Ingeniería Aeroespacial (ETSIAE) de la UPM, Plaza del Cardenal Cisneros 3, 28040 (Madrid).
-                        Líneas de metro: 6 (Moncloa, Ciudad Universitaria), y 3 (Moncloa).
-                        Líneas EMT: 82, 132, 46, 83, 133, 160, 161, 162, G y U
-                        Nos puedes visitar en el local 164 (debajo de cafetería).
-                        <Map location={locationSede} zoomLevel={17} />
+                        <h5>Lunes – Viernes</h5>
+                        <p className='location'>Pza. Cardenal Cisneros 3, 28040 Madrid</p>
+                        <p> Nuestro local se encuentra en la Escuela Técnica Superior de Ingeniería Aeroespacial (ETSIAE) de la UPM, Plaza del Cardenal Cisneros 3, 28040 (Madrid).</p>
+                        <ul>
+                            <li>Líneas de metro: 6 (Moncloa, Ciudad Universitaria), y 3 (Moncloa).</li>
+                            <li>Líneas EMT: 82, 132, 46, 83, 133, 160, 161, 162, G y U.</li>
+                        </ul>
+                        <p> Nos puedes visitar en el local 164 (debajo de cafetería).</p>
+
                     </section>
                 </Col>
                 <Col md={6}>
                     <section>
-                        Fines de semana
-                        Aeródromo Municipal, Ctra. el Romeral, s/n, 45870 Lillo, Toledo
-                        Sin embargo, nuestros aviones están en el aeródromo de Lillo, Toledo, a una hora aproximadamente desde Madrid. Es aquí donde el club realiza toda su actividad de vuelo y la mayor parte de las tareas de mantenimiento.
-                        <Map location={locationAerodromo} zoomLevel={17} />
+                        <h5>Fines de semana</h5>
+                        <p className='location'>Aeródromo Municipal. Ctra. el Romeral s/n, 45870 Lillo, Toledo</p>
+                        <p>Sin embargo, nuestros aviones están en el aeródromo de Lillo, Toledo, a una hora aproximadamente desde Madrid. Es aquí donde el club realiza toda su actividad de vuelo y la mayor parte de las tareas de mantenimiento.</p>
                     </section>
                 </Col>
             </Row>
-
+            <Row>
+                <Col>
+                    <Map location={locationSede} zoomLevel={17} />
+                </Col>
+                <Col>
+                    <Map location={locationAerodromo} zoomLevel={17} />
+                </Col>
+            </Row>
             <h1>Contacta con nosotros</h1>
 
             <Row className="justify-content-md-center">
-                <Col md={6}>
+                <Col md={5}>
                     <p>Si tienes cualquier duda, mándanos un e-mail y trataremos de responderte lo antes posible.</p>
                     <ContactForm />
                 </Col>

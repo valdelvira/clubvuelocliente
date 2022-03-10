@@ -16,7 +16,7 @@ import ProjectsPage from "../pages/ProjectPage/ProjectsPage"
 import UsersListPage from "../pages/UserListPage/UserListPage"
 import PayPage from "../pages/PayPage/PayPage"
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
-
+import SponsorsPage from "../pages/SponsorsPage/SponsorsPage"
 
 const AppRoutes = () => {
     return (
@@ -51,6 +51,7 @@ const AppRoutes = () => {
                 <Route path=":user_id/edit" element={<EditProfileForm />} />
             </Route>
             <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/sponsors" element={<SponsorsPage />} />
             <Route path="*" element={<h1>404</h1>} />
 
         </Routes>

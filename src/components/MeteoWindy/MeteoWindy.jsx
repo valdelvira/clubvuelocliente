@@ -26,13 +26,13 @@ const MeteoWindy = () => {
     // })
 
     return (
-        <Container>
-            <div id="windy" style={{
-                width: '50%',
-                height: '600px'
-            }}
-            ></div>
-        </Container>
+
+        <div id="windy" style={{
+            width: '100%',
+            height: '550px'
+        }}
+        ></div>
+
 
     )
 
