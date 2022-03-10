@@ -2,7 +2,7 @@ import { Card, Button, Col, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import profileService from '../../services/profile.service'
 
-const UserCard = ({ _id, name, lastname, email, refreshProfiles, role }) => {
+const UserCard = ({ _id, name, lastName, email, refreshProfiles, role }) => {
 
     const deleteProfile = id => {
         profileService
@@ -23,7 +23,7 @@ const UserCard = ({ _id, name, lastname, email, refreshProfiles, role }) => {
         <Col>
             <Card style={{ width: '18rem' }}>
                 <Card.Body>
-                    <Card.Title><Link to={`/profile/${_id}`}>{name }{ lastname }</Link></Card.Title>
+                    <Card.Title><Link to={`/profile/${_id}`}>{name } { lastName }</Link></Card.Title>
                     <Card.Text>
                         { email } <br/>Tipo de usuario: {role}
                     </Card.Text>
