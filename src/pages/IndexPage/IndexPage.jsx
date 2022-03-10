@@ -151,14 +151,8 @@ const IndexPage = () => {
                                         <h3>Remolque en nuestra Pawnee</h3>
                                         <div>
                                             Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
-                                        <div className="text-container">
-                                            <h3>Remolque en nuestra Pawnee</h3>
-                                            <div>
-                                                Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
-
                                         </div>
                                     </div>
-                                </div>
                                 </div>
 
                             </Col >
@@ -173,7 +167,8 @@ const IndexPage = () => {
                                 <Col>
                                     <div className="prices-card">
 
-                                        <p className="blue center">Cuotas anuales:</p>
+                                        <h5 className="blue center">Cuotas anuales:</h5>
+                                        <img className="icons" src="https://img.icons8.com/wired/64/000000/money.png" />
                                         <ul >
                                             <li className="center">Cuota anual miembro no egresado de nuevo ingreso: 10€</li>
                                             <li className="center">Cuota anual miembro no egresado: 15€</li>
@@ -184,7 +179,8 @@ const IndexPage = () => {
                                 </Col>
                                 <Col >
                                     <div className="prices-card">
-                                        <p className="blue center">Tarifas vuelo:</p>
+                                        <h5 className="blue center">Tarifas vuelo:</h5>
+                                        <img className="icons" src="https://img.icons8.com/external-icongeek26-outline-icongeek26/64/000000/external-plane-craft-and-tools-icongeek26-outline-icongeek26.png" />
                                         <ul>
                                             <li className="center">Minuto de vuelo socios no Akaflieg en K7: 0,20 €/min*</li>
                                             <li className="center">Minuto de vuelo socios no Akaflieg en SB-5: 0,30 €/min*</li>

@@ -62,7 +62,7 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                             <div>
                                 {description?.substring(0, 200)}
                             </div>
-                            <Button className="bg-blue" onClick={handleModalOpen}>Detalles</Button>
+                            <Button className="bg-blue boton-events" onClick={handleModalOpen}>Detalles</Button>
                         </div>
                     </div>
                 </Col>
@@ -70,13 +70,15 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
             <Modal show={showModal} onHide={handleModalClose} size="lg" >
 
                 <Container>
-                    <Modal.Title>Detalles del evento</Modal.Title>
+                    <br />
+                    <Modal.Title className="detalles-evento">Detalles del evento</Modal.Title>
 
                     <Modal.Body>
                         <Card style={{ width: '20 rem' }}>
                             <Card.Img src={imgURL} />
                             <Card.Body>
-                                <Card.Title key={_id}>{title}</Card.Title>
+                                <Card.Title className="titleCard" key={_id}>{title}</Card.Title>
+                                <hr></hr>
                                 <Card.Text>
                                     {description}
                                     <hr />
@@ -98,10 +100,14 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
 
                                                 return (
                                                     <>
+
                                                         <span key={elem?._id} className="participantCard">
+
                                                             <img src={elem?.imageURL} className="userPhoto" alt="user image" />
-                                                            <span>{elem?.name} {elem?.lastname}
-                                                                {user?.role === 'ADMIN' && <Button variant="warning" onClick={() => popEvent(elem?._id)}>Anular</Button>}
+
+                                                            <span>{elem?.name} {elem?.lastName}
+
+                                                                {user?.role === 'ADMIN' && <Button variant="warning" className="boton-anular" style={{ width: '20%' }} onClick={() => popEvent(elem?._id)}>Anular</Button>}
                                                             </span>
                                                         </span>
                                                         <hr />
@@ -113,15 +119,9 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     }
                                 </Card.Text>
                                 <Stack gap={3}>
-<<<<<<< HEAD
-                                    {user?.role === 'ADMIN' && <Button variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
-                                    <Link to={`/events/${_id}/edit`}>
-                                        {user?.role === 'ADMIN' && <Button variant="warning">Editar </Button>}
-=======
                                     {user?.role === 'ADMIN' && <Button style={{ width: '50%' }} variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
                                     <Link to={`/events/${_id}/edit`} style={{ display: 'block' }}>
                                         {user?.role === 'ADMIN' && <Button style={{ width: '50%', display: 'block' }} variant="warning">Editar </Button>}
->>>>>>> ae93c5902e799b0a9f8ec1255395d76b2bc961d7
                                     </Link>
                                 </Stack>
                             </Card.Body >

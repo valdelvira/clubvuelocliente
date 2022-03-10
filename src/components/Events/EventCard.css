@@ -93,3 +93,20 @@
     border:1px solid #00a9ff;
     color: #00a9ff;
 }
+
+.boton-events {
+    margin: 10px 0;
+}
+
+.detalles-evento {
+    padding-left: 20px;
+}
+
+.titleCard {
+    font-size:x-large!important;
+    margin-top: 10px;
+}
+
+.boton-anular {
+    margin-left: 20px;
+}
