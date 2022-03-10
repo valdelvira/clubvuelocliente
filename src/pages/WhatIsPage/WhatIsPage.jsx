@@ -14,7 +14,7 @@ const WhatIsPage = () => {
                     <Row>
                         <Col>
                             <h1>¿Qué es un Akaflieg?</h1>
-                            <br />
+                            <hr />
                             <p>El Akaflieg Madrid surge en 2017 con la iniciativa de retomar los objetivos iniciales del Club de Vuelo UPM para crear un club universitario igual a los de las universidades alemanas, llamados “Akaflieg”.</p>
                             <p>Estos clubes surgieron en Alemania entre la 1ª y la 2ª Guerra Mundial como consecuencia de que se impulsaran los concursos de creación de aviones sin motor (por las sanciones impuestas a Alemania tras la 1ª Guerra Mundial),
                                 lo que favoreció la creación de pequeños grupos de estudiantes de ingeniería de distintas universidades técnicas, con el objetivo de formar en la teoría y práctica del diseño aeronáutico.</p>

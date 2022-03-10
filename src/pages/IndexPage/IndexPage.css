@@ -8,12 +8,7 @@
     justify-content: center!important;
     align-items: center!important;
     color: white;
-    padding-bottom: 200px;
-  
-}
-
-.index-page .mb{
-    margin-bottom: 80px;
+    padding-bottom: 200px; 
 }
 
 .index-page .blue {
@@ -225,6 +220,15 @@
   right: 10px;
 }
 
+.index-page .facebook {
+  display: flex;
+  justify-content: center;
+}
+
+.index-page .twitter {
+  display: flex;
+  justify-content: center;
+}
 
 
 

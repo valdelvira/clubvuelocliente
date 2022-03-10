@@ -1,4 +1,4 @@
-import { Button, Container, Row, Stack } from 'react-bootstrap'
+import { Button, Container, Row, Stack, Image, Col } from 'react-bootstrap'
 import newsServices from '../../services/news.service'
 import { AuthContext } from '../../context/auth.context'
 import { useState, useEffect, useContext } from 'react'
@@ -47,28 +47,36 @@ function NewsDetails() {
     }
     return (
         <>
-            <Container>
-                <img src={theNew.imgURL} alt={theNew.title} />
-                <h1>{theNew.title}</h1>
-
+            <Container className="containerNews">
                 <Row>
-                    <section>{theNew.description}</section>
-                <Stack className='mb-3' gap={3}>
-                    {user?.role === 'ADMIN' && <Link className='btn btn-warning' to={`/news/${theNew._id}/edit`}>Editar</Link>}
-                    {user?.role === 'ADMIN' && <Button variant="danger" onClick={deleteTheNews}>Borrar</Button>}
-                </Stack>
+                    <Col sm={8}>
+                        <Image src={theNew.imgURL} alt={theNew.title} className="imageNews" />
+                        <h1>{theNew.title}</h1>
 
-                    <CommentForm newsId={theNew._id} loadNews={loadNews} />
-                    {
-                        theNew.comments?.map(elem => {
-                            return (
-                                <span  className="my-4" key={elem._id}>
-                                    Escrito por {elem.owner?.name}: 
-                                    <q> {elem.comment}</q>
-                                    {user?.role === 'ADMIN' && <Button className="my-4" variant="danger" onClick={() => deleteComment(elem._id)}>Borrar comentario</Button>}
-                                </span>)
-                        })
-                    }
+                        <section>{theNew.description}</section>
+                        <Stack className='mb-3' gap={3}>
+                            {user?.role === 'ADMIN' && <Link className='btn btn-warning' style={{ width: '30%' }} to={`/news/${theNew._id}/edit`}>Editar</Link>}
+                            {user?.role === 'ADMIN' && <Button variant="danger" style={{ width: '30%' }} onClick={deleteTheNews}>Borrar</Button>}
+                        </Stack>
+
+                    </Col>
+                    <Col sm={4} className="second-column">
+                        <div>
+                            <CommentForm newsId={theNew._id} loadNews={loadNews} />
+                        </div>
+                        <div className='commentsNews'>
+                            {
+                                theNew.comments?.map(elem => {
+                                    return (
+                                        <span className="my-4" key={elem._id}>
+                                            <p className='ownerComment'>Escrito por {elem.owner?.name}:</p>
+                                            <q> {elem.comment}</q>
+                                            {user?.role === 'ADMIN' && <Button className="my-4" variant="danger" style={{ width: '40%' }} onClick={() => deleteComment(elem._id)}>Borrar comentario</Button>}
+                                        </span>)
+                                })
+                            }
+                        </div>
+                    </Col>
                 </Row>
             </Container>
         </>

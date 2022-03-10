@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import profileService from '../../services/profile.service'
 import UsersList from './../../components/UsersList/UsersList'
 import LoadingSpinner from './../../components/LoadingSpinner/LoadingSpinner'
+import './UserListPage.css'
 
 function UserListPage() {
     const [usersList, setUserList] = useState([])
@@ -17,10 +18,12 @@ function UserListPage() {
     }
     return (
         <>
-            <Container>
+            <Container className='listContainer'>
                 <h1>Gestión de usuarios</h1>
+                <hr />
+                <br />
                 <Row>
-                    { !usersList.length ? <LoadingSpinner /> : <UsersList usersList={usersList} refreshProfiles={loadUserList}/>}
+                    {!usersList.length ? <LoadingSpinner /> : <UsersList usersList={usersList} refreshProfiles={loadUserList} />}
                 </Row>
             </Container>
         </>

@@ -1,6 +1,5 @@
 import './Footer.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import LoginForm from '../LoginForm/LoginForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { Link } from 'react-router-dom'
@@ -13,23 +12,22 @@ const Footer = () => {
                 <Row>
                     <Col>
                         <ul>
-                            <li><a href="/about-us">Sobre nosotros</a></li>
-                            <li><a href="/projects">Proyectos</a></li>
-                            <li><a href="/sponsors">Sponsors</a></li>
-                            <li><a href="/contact">Contactar</a></li>
+                            <li><Link to="/about-us">Sobre nosotros</Link></li>
+                            <li><Link to="/projects">Proyectos</Link></li>
+                            <li><Link to="/sponsors">Sponsors</Link></li>
+                            <li><Link to="/contact">Contactar</Link></li>
                         </ul>
                     </Col>
                     <Col>
                         <ul>
-                            <li><a href="/what-is">¿Qué es un Akaflieg?</a></li>
-                            <li><a href="/meteo">Meteo</a></li>
-                            <li><a href="/news">Noticias</a></li>
-                            <li><a href="/events">Eventos</a></li>
+                            <li><Link to="/what-is">¿Qué es un Akaflieg?</Link></li>
+                            <li><Link to="/meteo">Meteo</Link></li>
+                            <li><Link to="/news">Noticias</Link></li>
+                            <li><Link to="/events">Eventos</Link></li>
                         </ul>
                     </Col>
-                    <Col></Col>
                     <Col>
-                        <div className="fb-like" data-href="https://www.facebook.com/clubvueloupm" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="false"></div>
+
                         <div className="wrapper">
                             <div className="icon facebook">
                                 <div className="tooltip">Facebook</div>
@@ -49,6 +47,11 @@ const Footer = () => {
                                     <span><FontAwesomeIcon icon={faInstagram} /></span>
                                 </a>
                             </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <br />
+                        <div className="fb-like" data-href="https://www.facebook.com/clubvueloupm" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="false">
                         </div>
                     </Col>
                 </Row>
