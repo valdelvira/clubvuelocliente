@@ -4,7 +4,7 @@ import './NewsCard.css'
 
 const NewsCard = ({ _id, title, description, imgURL }) => {
     return (
-        <Container >
+        <Container className="news-card">
             <Col>
                 <div class="a-box ">
                     <div class="img-container ">

@@ -1,6 +1,5 @@
 
-
-.hero {
+.index-page .hero {
     background-size: cover;
     height: 700px;
     width: 100%;
@@ -9,19 +8,28 @@
     justify-content: center!important;
     align-items: center!important;
     color: white;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
   
 }
 
-.mb{
+.index-page .mb{
     margin-bottom: 80px;
 }
 
-.blue {
+.index-page .blue {
     color: #00a9ff;
 }
 
-.parallax {
+.index-page .box {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+}
+.index-page .conocenos {
+  text-decoration: none;
+}
+
+.index-page .parallax {
   background-image: url("https://akafliegmadrid.etsiae.upm.es/wp-content/uploads/2019/02/K7_landing_2.jpg");
 
   min-height: 500px;
@@ -32,7 +40,7 @@
   background-size: cover;
 }
 
-.center {
+.index-page .center {
     display: flex;
     justify-content: center!important;
     align-items: center!important;
@@ -40,7 +48,7 @@
 
 /* -----------------------------  INDEX NEWS  -----------------------------*/
 
-.newsTitle {
+.index-page .newsTitle {
     display: flex;
     justify-content: center!important;
     align-items: center!important;
@@ -48,30 +56,30 @@
     font-size: 2.5em;
 }
 
-.newsSection {  
+.index-page .newsSection {  
     margin-bottom: 100px;
 }
 
-.newsSection img {
+.index-page .newsSection img {
     object-fit: cover;
 }
 
-.newsCard {
+.index-page .newsCard {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     border-radius: 20px;
 }
 
-.newsCard:hover {
+.index-page .newsCard:hover {
     top:-4;
 }
 
-.a-box {
+.index-page .a-box {
   display: inline-block;
   width: 30%px;
   text-align: center;
 }
 
-.img-container {
+.index-page .img-container {
     height: 230px;
     width: 280px;
     overflow: hidden;
@@ -79,14 +87,14 @@
     display: inline-block;
 }
 
-.img-container img {
+.index-page .img-container img {
     /* object-fit: cover; */
     transform: skew(0deg, -5deg);
     height: 250px;
     margin: -35px 0px 0px -70px;
 }
 
-.inner-skew {
+.index-page .inner-skew {
     display: inline-block;
     border-radius: 20px;
     overflow: hidden;
@@ -99,7 +107,7 @@
     width: 250px;
 }
 
-.text-container {
+.index-page .text-container {
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
   padding: 120px 20px 20px 20px;
   border-radius: 20px;
@@ -109,7 +117,7 @@
   font-size: 14px;
 }
 
-.text-container h3 {
+.index-page .text-container h3 {
   margin: 20px 0px 10px 0px;
   color: #00a9ff;
   font-size: 18px;
@@ -117,28 +125,25 @@
 
 /* -----------------------------  INDEX PRICES  -----------------------------*/
 
-.prices-title {
+.index-page .prices-title {
     margin-top:50px ;
     margin-bottom:50px ;
 
 }
 
-.prices {
+.index-page .prices {
     margin-bottom: 100px;
 }
 
-.btn-effect {
-
- 
-
+.index-page .btn-effect {
   border-radius: 4px;
-  background-color: #5ca1e1;
-  border: none;
+  /* background-color: #5ca1e1; */
+  border: 1px solid;
   color: #fff;
   text-align: center;
-  font-size: 32px;
-  padding: 16px;
-  width: 220px;
+  font-size: 20px;
+  padding: 10px;
+  width: 300px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 36px;
@@ -146,39 +151,39 @@
 }
 
 
-.btn-effect{
+.index-page .btn-effect{
   cursor: pointer;
   display: inline-block;
   position: absolute;
   transition: 0.5s;
-  margin-left: 14rem;
+  margin-left: 10rem;
 }
 
-.btn-effect:after {
-  content: '»';
+.index-page .btn-effect:after {
+  content: '✈︎';
   position: absolute;
   opacity: 0;  
-  top: 14px;
+  top: 10px;
   right: -20px;
   transition: 0.5s;
 }
 
-.btn-effect:hover{
+.index-page .btn-effect:hover{
   padding-right: 24px;
   padding-left:8px;
 }
 
-button:hover:after {
+.index-page button:hover:after {
   opacity: 1;
   right: 10px;
 }
 
 
-.facebook {
+.index-page .facebook {
   margin-left: 150px;
 }
 
-.twitter {
+.index-page .twitter {
   margin-right: 200px;
 }
 
