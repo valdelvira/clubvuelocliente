@@ -1,6 +1,5 @@
 import './MeteoWindy.css'
 import { Container } from 'react-bootstrap';
-import useScript from './useScriptHook'
 
 const MeteoWindy = () => {
 

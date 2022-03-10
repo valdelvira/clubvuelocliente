@@ -118,7 +118,7 @@ const SignUpForm = () => {
                             <Form.Control type="date" name="birth" value={signUpForm.birth} onChange={handleInputChange} />
                         </Form.Group>
 
-                        <Button className='bg-blue'>Acceder</Button>
+                        <Button className='bg-blue' type='submit'>Acceder</Button>
 
                     </Form>
                 </Col>

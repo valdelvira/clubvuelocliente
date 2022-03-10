@@ -57,7 +57,7 @@ const LoginForm = ({ closeModal }) => {
                     <Form.Control type="password" name="password" value={LoginForm.password} onChange={handleInputChange} />
                 </Form.Group>
                 <Stack gap={4}>
-                    <Button className="bg-blue">Acceder</Button>
+                    <Button className="bg-blue" type="submit">Acceder</Button>
                     {
                         show && <Alert variant="danger">Usuario o contraseña incorrecta</Alert>
                     }
