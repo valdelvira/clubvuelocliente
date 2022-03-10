@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import eventService from "../../services/event.service"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 import uploadService from "../../services/upload.service"
-
+import './EditEventForm.css'
 
 const EditEventForm = () => {
 
@@ -65,22 +65,24 @@ const EditEventForm = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} >
-            <Form.Group className="mb-3">
-                <Form.Label>Title</Form.Label>
-                <Form.Control type="text" name="title" value={eventForm?.title} onChange={handleInputChange} />
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Description</Form.Label>
-                <Form.Control type="text" name="description" value={eventForm?.description} onChange={handleInputChange} />
-            </Form.Group>
-            <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Foto del evento</Form.Label>
-                <Form.Control type="file" name='imgURL' onChange={uploadNewImage} />
-            </Form.Group>
+        <Container className="editFormEvent">
+            <Form onSubmit={handleSubmit} >
+                <Form.Group className="mb-3">
+                    <Form.Label>Title</Form.Label>
+                    <Form.Control type="text" name="title" value={eventForm?.title} onChange={handleInputChange} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Description</Form.Label>
+                    <Form.Control type="text" name="description" value={eventForm?.description} onChange={handleInputChange} />
+                </Form.Group>
+                <Form.Group controlId="formFile" className="mb-3">
+                    <Form.Label>Foto del evento</Form.Label>
+                    <Form.Control type="file" name='imgURL' onChange={uploadNewImage} />
+                </Form.Group>
 
-            <Button variant="dark" type="submit" style={{ width: '100%' }} disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Editar evento'}</Button>
-        </Form >
+                <Button variant="dark" type="submit" style={{ width: '30%' }} disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Editar evento'}</Button>
+            </Form >
+        </Container>
 
     )
 }

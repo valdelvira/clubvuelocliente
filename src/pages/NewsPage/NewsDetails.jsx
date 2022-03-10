@@ -4,14 +4,14 @@ import { AuthContext } from '../../context/auth.context'
 import { useState, useEffect, useContext } from 'react'
 import CommentForm from '../../components/News/CommentForm/CommentForm'
 import './NewsDetails.css'
-import {  useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 
 
 function NewsDetails() {
     const [theNew, setTheNew] = useState([])
     const { user } = useContext(AuthContext)
     const { _id } = useParams()
-    const  navigate  = useNavigate()
+    const navigate = useNavigate()
     useEffect(() => { loadNews() }, [])
 
     const deleteTheNews = () => {
@@ -69,7 +69,7 @@ function NewsDetails() {
                                         <span className="my-4" key={elem._id}>
                                             <p className='ownerComment'>Escrito por {elem.owner?.name}:</p>
                                             <q> {elem.comment}</q>
-                                            {user?.role === 'ADMIN' && <Button className="my-4" variant="danger" style={{ width: '40%' }} onClick={() => deleteComment(elem._id)}>Borrar comentario</Button>}
+                                            {user?.role === 'ADMIN' && <Button className="my-4 buton-eliminar" variant="danger" style={{ width: '40%' }} onClick={() => deleteComment(elem._id)}>Borrar comentario</Button>}
                                         </span>)
                                 })
                             }
