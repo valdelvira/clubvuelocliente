@@ -113,15 +113,9 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     }
                                 </Card.Text>
                                 <Stack gap={3}>
-<<<<<<< HEAD
-                                    {user?.role === 'ADMIN' && <Button variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
-                                    <Link to={`/events/${_id}/edit`}>
-                                        {user?.role === 'ADMIN' && <Button variant="warning">Editar </Button>}
-=======
                                     {user?.role === 'ADMIN' && <Button style={{ width: '50%' }} variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
                                     <Link to={`/events/${_id}/edit`} style={{ display: 'block' }}>
                                         {user?.role === 'ADMIN' && <Button style={{ width: '50%', display: 'block' }} variant="warning">Editar </Button>}
->>>>>>> ae93c5902e799b0a9f8ec1255395d76b2bc961d7
                                     </Link>
                                 </Stack>
                             </Card.Body >
