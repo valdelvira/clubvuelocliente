@@ -18,72 +18,72 @@ const Navigation = () => {
 
     return (
         <>
-            <Navbar bg="light" variant="light" className='navigator' sticky='top'  expand="lg">
+            <Navbar bg="light" variant="light" className='navigator' sticky='top' expand="lg">
                 <Container>
                     <NavLink to="/">
                         <Image src={logo} />
                     </NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
-                    <Nav  className="me-auto">
-                        <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
-                            <NavLink to="/what-is">
-                                <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>
-                            </NavLink>
-                            <NavLink to="/projects">
-                                <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>
-                            </NavLink>
-                            <NavLink to="/sponsors">
-                                <NavDropdown.Item as="span">Sponsors</NavDropdown.Item>
-                            </NavLink>
-                            <NavLink to="#">
-                                <NavDropdown.Item as="span">Precios</NavDropdown.Item>
-                            </NavLink>
-                            <NavLink to="/contact">
-                                <NavDropdown.Item as="span">Contacto</NavDropdown.Item>
-                            </NavLink>
-                        </NavDropdown>
-
-                        <NavLink to="/meteo">
-                            <Nav.Link as="span">Meteo</Nav.Link>
-                        </NavLink>
-
-                        <NavLink to="/news">
-                            <Nav.Link as="span">Noticias</Nav.Link>
-                        </NavLink>
-
-                        <NavLink to="/events">
-                            <Nav.Link as="span" >Eventos</Nav.Link>
-                        </NavLink>
-                        {
-                            user?.role === 'ADMIN' ?
-
-                                <NavLink to="/profile">
-                                    <Nav.Link as="span" >Usuarios</Nav.Link>
+                        <Nav>
+                            <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
+                                <NavLink to="/what-is">
+                                    <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>
                                 </NavLink>
-                                :
-                                null
-                        }
+                                <NavLink to="/projects">
+                                    <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>
+                                </NavLink>
+                                <NavLink to="/sponsors">
+                                    <NavDropdown.Item as="span">Sponsors</NavDropdown.Item>
+                                </NavLink>
+                                <NavLink to="#">
+                                    <NavDropdown.Item as="span">Precios</NavDropdown.Item>
+                                </NavLink>
+                                <NavLink to="/contact">
+                                    <NavDropdown.Item as="span">Contacto</NavDropdown.Item>
+                                </NavLink>
+                            </NavDropdown>
 
-                        {
-                            !isLoggedIn ?
-                                <>
-                                    <NavLink to="/signup">
-                                        <Nav.Link as="span" >Registrarse</Nav.Link>
+                            <NavLink to="/meteo">
+                                <Nav.Link as="span">Meteo</Nav.Link>
+                            </NavLink>
+
+                            <NavLink to="/news">
+                                <Nav.Link as="span">Noticias</Nav.Link>
+                            </NavLink>
+
+                            <NavLink to="/events">
+                                <Nav.Link as="span" >Eventos</Nav.Link>
+                            </NavLink>
+                            {
+                                user?.role === 'ADMIN' ?
+
+                                    <NavLink to="/profile">
+                                        <Nav.Link as="span" >Usuarios</Nav.Link>
                                     </NavLink>
-                                    <Nav.Link onClick={handleModalOpen} > Iniciar sesión</Nav.Link>
+                                    :
+                                    null
+                            }
 
-                                </>
-                                :
-                                <>
-                                    <NavLink to={`/profile/${user?._id}`}>
-                                        <Nav.Link as="span">¡Hola, {user?.username}!</Nav.Link>
-                                    </NavLink>
-                                    <Nav.Link as="span" onClick={logOutUser}>Cerrar sesión</Nav.Link>
-                                </>
-                        }
+                            {
+                                !isLoggedIn ?
+                                    <>
+                                        <NavLink to="/signup">
+                                            <Nav.Link as="span" >Registrarse</Nav.Link>
+                                        </NavLink>
+                                        <Nav.Link onClick={handleModalOpen} > Iniciar sesión</Nav.Link>
 
-                    </Nav>
+                                    </>
+                                    :
+                                    <>
+                                        <NavLink to={`/profile/${user?._id}`}>
+                                            <Nav.Link as="span">¡Hola, {user?.username}!</Nav.Link>
+                                        </NavLink>
+                                        <Nav.Link as="span" onClick={logOutUser}>Cerrar sesión</Nav.Link>
+                                    </>
+                            }
+
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar >

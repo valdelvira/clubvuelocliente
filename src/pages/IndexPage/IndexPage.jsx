@@ -105,15 +105,15 @@ const IndexPage = () => {
                         </div>
                         <Row>
                             <Col>
-                                <div class="a-box ">
-                                    <div class="img-container ">
-                                        <div class="img-inner">
-                                            <div class="inner-skew">
+                                <div className="a-box ">
+                                    <div className="img-container ">
+                                        <div className="img-inner">
+                                            <div className="inner-skew">
                                                 <img src={k7plane} />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-container">
+                                    <div className="text-container">
                                         <h3>Vuelo en K7</h3>
                                         <div>
                                             El primer avión del club fue nuestro planeador "old-school", Alexander Schleicher K7 Rhönadler. Tiene espacio para dos personas, así que si quieres volar acompañado solo te costará 0.20€/min.
@@ -123,15 +123,15 @@ const IndexPage = () => {
                             </Col>
                             <Col>
 
-                                <div class="a-box">
-                                    <div class="img-container">
-                                        <div class="img-inner">
-                                            <div class="inner-skew">
+                                <div className="a-box">
+                                    <div className="img-container">
+                                        <div className="img-inner">
+                                            <div className="inner-skew">
                                                 <img src={SB5} />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-container">
+                                    <div className="text-container">
                                         <h3>Vuelo en SB-5</h3>
                                         <div>
                                             Si por el contrario prefieres volar solo en nuestro avión monoplaza de la Akaflieg Braunschweig, SB-5 Danzig, te costará <strong>0.30€/min</strong>.                                    </div>
@@ -154,7 +154,7 @@ const IndexPage = () => {
                                                 <img src={pawnee} />
                                             </div>
                                         </div>
-                                        <div class="text-container">
+                                        <div className="text-container">
                                             <h3>Remolque en nuestra Pawnee</h3>
                                             <div>
                                                 Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
@@ -169,11 +169,11 @@ const IndexPage = () => {
                     </section >
 
                     <section>
-                        <Row><h2 classNameName="center mb">Redes Sociales</h2></Row>
+                        <h2 className="center mb">Redes Sociales</h2>
                         <Row>
-                            <Col classNameName="facebook"><Facebook></Facebook></Col>
+                            <Col className="facebook"><Facebook></Facebook></Col>
 
-                            <Col classNameName="twitter"><Twitter></Twitter></Col>
+                            <Col className="twitter"><Twitter></Twitter></Col>
                         </Row>
                     </section>
 
