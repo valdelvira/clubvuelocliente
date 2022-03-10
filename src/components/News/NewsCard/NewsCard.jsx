@@ -6,15 +6,15 @@ const NewsCard = ({ _id, title, description, imgURL }) => {
     return (
         <Container >
             <Col>
-                <div class="a-box ">
-                    <div class="img-container ">
-                        <div class="img-inner">
-                            <div class="inner-skew">
+                <div className="a-box ">
+                    <div className="img-container ">
+                        <div className="img-inner">
+                            <div className="inner-skew">
                                 <img src={imgURL} />
                             </div>
                         </div>
                     </div>
-                    <div class="text-container">
+                    <div className="text-container">
                         <h3>{title}</h3>
                         <div>
                             {description?.substring(0, 200)}

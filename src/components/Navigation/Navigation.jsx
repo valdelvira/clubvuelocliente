@@ -31,7 +31,7 @@ const Navigation = () => {
                             <NavLink to="/projects">
                                 <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>
                             </NavLink>
-                            <NavLink to="#">
+                            <NavLink to="/sponsors">
                                 <NavDropdown.Item as="span">Sponsors</NavDropdown.Item>
                             </NavLink>
                             <NavLink to="#">

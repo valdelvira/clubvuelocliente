@@ -2,41 +2,41 @@
     margin-top: 40px;
 }
 
-.image {
+.aboutCointainer .image {
     height: 350px;
     margin-top: 20px;
 }
 
-.images2 {
+.aboutCointainer .images2 {
     height: 350px;
     margin-top: 20px;
     padding-right: 20px!important;
 }
 
-h5{
+.aboutCointainer h5{
     display: flex;
     justify-content: center;
     font-style: italic;
 }
 
-.logo {
+.aboutCointainer .logo {
     width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.firstPara > p {
+.aboutCointainer .firstPara > p {
     font-display: flex;
     text-align: center;
     font-weight: 300;
 }
 
-.firstPara {
+.aboutCointainer .firstPara {
     margin-bottom: 40px;
 }
 
-.planes {
+.aboutCointainer .planes {
     margin: 20px 0;
     height: 280px;
 }

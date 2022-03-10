@@ -1,11 +1,11 @@
 import './Footer.css'
-import { Container, Navbar } from 'react-bootstrap'
+
 
 const Footer = () => {
     return (
-        <Container className='contFooter'>
-            <footer> Todos los derechos reservados - Desarrollado por Diego Valdelvira, Miguel Ortega y Mario Díaz</footer>
-        </Container>
+
+        <footer sticky='top' className='contFooter'> Todos los derechos reservados - Desarrollado por Diego Valdelvira, Miguel Ortega y Mario Díaz</footer>
+
     )
 }
 

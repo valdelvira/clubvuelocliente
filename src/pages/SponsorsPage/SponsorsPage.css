@@ -1,0 +1,27 @@
+.containerSponsors {
+    margin: 40px 0;
+}
+
+.containerSponsors .sponsors {
+    height: 200px;
+    margin: 20px 0;
+}
+
+.containerSponsors .sponsors2 {
+    height: 150px;
+    margin: 20px 0;
+}
+
+.containerSponsors .sponsors3 {
+     height: 200px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSponsors h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

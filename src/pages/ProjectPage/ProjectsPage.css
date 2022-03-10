@@ -2,31 +2,31 @@
     margin: 40px;
 }
 
-h2 {
+.container-projects h2 {
     text-decoration: underline;
 }
 
-.photoplane {
+.container-projects .photoplane {
     margin-bottom: 20px;
 }
 
-article {
+.container-projects article {
     margin: 40px 0;
 }
 
-.relato {
+.container-projects .relato {
     font-style: italic;
     font-weight: 200;
 }
 
-.arreglo {
+.container-projects .arreglo {
     height: 250px;
 }
 
-section {
+.container-projects section {
     margin:20px;
 }
 
-.simulador {
+.container-projects .simulador {
     height: 400px;
 }
