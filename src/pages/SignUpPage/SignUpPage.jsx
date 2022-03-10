@@ -3,12 +3,12 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm"
 
 
 const SignUpPage = () => {
- return (
-     <Container>
-        <h1>Registro</h1>
-        <SignUpForm/>
-     </Container>
- )
+    return (
+        <Container>
+
+            <SignUpForm />
+        </Container>
+    )
 }
 
 export default SignUpPage

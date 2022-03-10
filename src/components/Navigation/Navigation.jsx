@@ -87,15 +87,17 @@ const Navigation = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar >
+            <div className='sign-in-modal'>
 
-            <Modal show={showModal} onHide={handleModalClose} size="lg">
-                <Modal.Header closeButton>
-                    <Modal.Title>Formulario de login</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <LoginForm closeModal={handleModalClose} />
-                </Modal.Body>
-            </Modal>
+                <Modal show={showModal} onHide={handleModalClose} size="lg">
+                    <Modal.Header closeButton>
+                        <Modal.Title>Acceso a usuarios</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <LoginForm closeModal={handleModalClose} />
+                    </Modal.Body>
+                </Modal>
+            </div>
 
         </>
     )

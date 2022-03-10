@@ -1,4 +1,5 @@
 
+
 .index-page .hero {
     background-size: cover;
     height: 700px;
@@ -36,6 +37,14 @@
     border-top: 2px solid #00a9ff;
     
     
+}
+
+.index-page .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px 0;
 }
 
 .index-page .box {
