@@ -1,0 +1,12 @@
+
+
+.login-form .bg-blue {
+    background-color: #00a9ff;
+    border: white;
+}
+
+.login-form .bg-blue:hover {
+    background-color: white;
+    border:1px solid #00a9ff;
+    color: #00a9ff;
+}

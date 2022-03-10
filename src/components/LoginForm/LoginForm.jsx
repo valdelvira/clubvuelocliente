@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import authService from "../../services/auth.service"
 import { AuthContext } from './../../context/auth.context'
 
+import './LoginForm.css'
+
 const LoginForm = ({ closeModal }) => {
 
     const [LoginForm, setLoginForm] = useState({
@@ -43,23 +45,25 @@ const LoginForm = ({ closeModal }) => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-4">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" value={LoginForm.email} onChange={handleInputChange} />
-            </Form.Group>
+        <div className="login-form">
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-4">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" name="email" value={LoginForm.email} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group className="mb-4">
-                <Form.Label>Contraseña</Form.Label>
-                <Form.Control type="password" name="password" value={LoginForm.password} onChange={handleInputChange} />
-            </Form.Group>
-            <Stack gap={4}>
-                <Button variant="dark" type="submit" style={{ width: '100%' }}>Acceder</Button>
-                {
-                    show &&  <Alert variant="danger">Usuario o contraseña incorrecta</Alert>
-                }   
-            </Stack>
-        </Form>
+                <Form.Group className="mb-4">
+                    <Form.Label>Contraseña</Form.Label>
+                    <Form.Control type="password" name="password" value={LoginForm.password} onChange={handleInputChange} />
+                </Form.Group>
+                <Stack gap={4}>
+                    <Button className="bg-blue">Acceder</Button>
+                    {
+                        show && <Alert variant="danger">Usuario o contraseña incorrecta</Alert>
+                    }
+                </Stack>
+            </Form>
+        </div >
     )
 }
 export default LoginForm
