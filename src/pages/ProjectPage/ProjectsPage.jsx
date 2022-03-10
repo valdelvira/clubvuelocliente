@@ -44,13 +44,12 @@ const ProjectsPage = () => {
                 <article>
                     <h2>Plataforma de ensayos en vuelo</h2>
                     <br />
-                    <p>
                         <Row>
                             <p>Con este proyecto esperamos diseñar un sistema capaz de registrar información sobre la posición de la aeronave y el aire que la rodea. En concreto, intentaremos utilizar estos datos para detectar la presencia de corrientes de aire ascendente, lo que nos permitiría desarrollar algoritmos que prolonguen la autonomía de vehículos aéreos tales como RPAS.</p>
                         </Row>
                         <Row>
                             <Col>
-                                <Image Style={`width:300px`} src={raspberryImg}></Image>
+                                <Image style={{width:`300px`}} src={raspberryImg}></Image>
 
                             </Col>
                             <Col xs={9}>
@@ -60,10 +59,6 @@ const ProjectsPage = () => {
                                 </p>
                             </Col>
                         </Row>
-                        <Row>
-
-                        </Row>
-                    </p>
                 </article>
                 <hr />
                 <article>
@@ -77,10 +72,10 @@ const ProjectsPage = () => {
                                 <p>Esta historia daba comienzo a uno de los primeros proyectos del Club: la rehabilitación de un planeador Grob G102 Astir CS para servir como simulador de vuelo a vela. Una vez analizamos los restos del avión, separamos la parte delantera del fuselaje y procedimos a la reparación del morro, el cual había recibido un fuerte impacto.</p>
                             </Col>
                             <Col>
-                                <Image Style={`width:300px`} src={proj1photo1}></Image>
+                                <Image style={{width:`300px`}} src={proj1photo1}></Image>
                             </Col>
                             <Col>
-                                <Image Style={`width:220px`} src={proj1photo2}></Image>
+                                <Image style={{width:`220px`}} src={proj1photo2}></Image>
                             </Col>
                         </Row>
                     </section>

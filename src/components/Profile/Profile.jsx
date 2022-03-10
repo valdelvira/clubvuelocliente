@@ -20,8 +20,8 @@ const Profile = ({ username, imageURL, aboutMe, flightHours, email, refreshProfi
             <Row>
                 <Col className='grey'>
 
-                    <div class="container ">
-                        <div class="avatar-flip">
+                    <div className="container ">
+                        <div className="avatar-flip">
                             <img src={imageURL} height="150" width="150" />
                             <img src="https://media4.giphy.com/media/WGqaq4lbMeh1e/giphy.gif?cid=ecf05e47lykkh2htnceccqwsftfc1vbzhbt7pxk07meank8c&rid=giphy.gif&ct=g" height="150" width="150" />
                         </div>

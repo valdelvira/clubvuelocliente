@@ -50,7 +50,7 @@ const IndexPage = () => {
                                     <Card.Body >
                                         <Card.Title className="center blue">Sommertreffen 2019</Card.Title>
                                         <Card.Text >
-                                            <p className="center">12 Sep , 2019</p>
+                                            <span className="center">12 Sep , 2019</span>
                                             Desde el Club de Vuelo, entre muchas otras cosas, buscamos fomentar la cultura aeronáutica a través nuestra participación y organización de actividades</Card.Text>
                                         <Link to={`/news`}>
                                             <Button className="bg-blue center">Leer más</Button>
@@ -64,7 +64,7 @@ const IndexPage = () => {
                                     <Card.Body className="">
                                         <Card.Title className="center blue">Cursillo ATC IVAO</Card.Title>
                                         <Card.Text>
-                                            <p className="center">16 Mar , 2019</p>
+                                            <span className="center">16 Mar , 2019</span>
                                             Como ya empieza a ser tradición, este año hemos vuelto a participar en la reunión de Akafliegs organizada en Alemania todos los veranos, ¡esta vez como
                                         </Card.Text>
                                         <Link to={`/news`}>
@@ -79,7 +79,7 @@ const IndexPage = () => {
                                     <Card.Body className="">
                                         <Card.Title className="center blue">Impresora 3D</Card.Title>
                                         <Card.Text>
-                                            <p className="center">13 Mar , 2019</p>
+                                            <span className="center">13 Mar , 2019</span>
                                             A medida que avanzábamos en los proyectos, se hacia más y más evidente la necesidad de poder fabricar distintos moldes y piezas para los proyectos, por lo que</Card.Text>
                                         <Link to={`/news`}>
                                             <Button className="bg-blue center">Leer más</Button>
@@ -146,18 +146,10 @@ const IndexPage = () => {
                                                 <img src={pawnee} />
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div className="text-container">
                                             <h3>Remolque en nuestra Pawnee</h3>
                                             <div>
                                                 Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
-=======
-                                    </div>
-                                    <div class="text-container">
-                                        <h3>Remolque en nuestra Pawnee</h3>
-                                        <div>
-                                            Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
->>>>>>> refs/remotes/origin/main
                                         </div>
                                     </div>
                                 </div>
@@ -198,12 +190,8 @@ const IndexPage = () => {
                     </section >
 
                     <section>
-<<<<<<< HEAD
-                        <h2 className="center mb">Redes Sociales</h2>
-=======
 
-                        <Row><h2 classNameName="center mb">Redes Sociales</h2></Row>
->>>>>>> refs/remotes/origin/main
+                        <Row><h2 className="center mb">Redes Sociales</h2></Row>
                         <Row>
                             <Col className="facebook"><Facebook></Facebook></Col>
 

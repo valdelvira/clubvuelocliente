@@ -4,20 +4,20 @@ import { AuthContext } from '../../context/auth.context'
 import { useState, useEffect, useContext } from 'react'
 import CommentForm from '../../components/News/CommentForm/CommentForm'
 import './NewsDetails.css'
-import { Navigate, useParams, Link } from 'react-router-dom'
+import {  useParams, Link, useNavigate } from 'react-router-dom'
 
 
 function NewsDetails() {
     const [theNew, setTheNew] = useState([])
     const { user } = useContext(AuthContext)
     const { _id } = useParams()
-
+    const  navigate  = useNavigate()
     useEffect(() => { loadNews() }, [])
 
     const deleteTheNews = () => {
         newsServices
             .deleteTheNews(_id)
-            .then(() => Navigate('/news'))
+            .then(() => navigate('/news'))
             .catch(err => console.log(err))
     }
 
@@ -32,7 +32,7 @@ function NewsDetails() {
     const putEditNews = () => {
         newsServices
             .putEditNews(_id)
-            .then(() => Navigate('/news'))
+            .then(() => navigate('/news'))
             .catch(err => console.log(err))
     }
 
@@ -40,9 +40,7 @@ function NewsDetails() {
 
         newsServices
             .getTheNew(_id)
-            .then(({ data }) => {
-                setTheNew(data)
-            })
+            .then(({ data }) => setTheNew(data))
             .catch(err => console.log(err))
     }
     return (

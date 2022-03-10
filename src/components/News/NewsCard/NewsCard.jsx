@@ -1,4 +1,4 @@
-import { Card, Button, Col, Container } from "react-bootstrap"
+import { Button, Col, Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import './NewsCard.css'
 

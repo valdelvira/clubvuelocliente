@@ -81,20 +81,10 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     {description}
                                     <hr />
                                     {
-<<<<<<< HEAD
                                         participants?.some(elem => elem?._id === user?._id) ?
                                             <Button variant="warning" onClick={() => popEvent(user?._id)}>Anular</Button>
                                             :
                                             <Button variant="primary" onClick={joinEvent}>Unirse</Button>
-=======
-                                        isLoggedIn ?
-                                            participants?.some(elem => elem?._id === user?._id) ?
-                                                <Button variant="warning" onClick={() => popEvent(user?._id)}>Anular</Button>
-                                                :
-                                                <Button variant="primary" onClick={joinEvent}>Unirse</Button>
-                                            :
-                                            null
->>>>>>> refs/remotes/origin/main
                                     }
                                     <hr></hr>
                                     <span className="big">Listado de participantes</span>
@@ -120,15 +110,9 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     }
                                 </Card.Text>
                                 <Stack gap={3}>
-<<<<<<< HEAD
                                     {user?.role === 'ADMIN' && <Button variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
                                     <Link to={`/events/${_id}/edit`}>
                                         {user?.role === 'ADMIN' && <Button variant="warning">Editar </Button>}
-=======
-                                    {user?.role === 'ADMIN' && <Button style={{ width: '50%' }} variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
-                                    <Link to={`/events/${_id}/edit`} style={{ display: 'block' }}>
-                                        {user?.role === 'ADMIN' && <Button style={{ width: '50%', display: 'block' }} variant="warning">Editar </Button>}
->>>>>>> refs/remotes/origin/main
                                     </Link>
                                 </Stack>
                             </Card.Body >

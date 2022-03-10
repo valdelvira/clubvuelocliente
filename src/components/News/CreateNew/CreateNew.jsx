@@ -39,9 +39,9 @@ function CreateNew({ refreshNews, closeModal }) {
         e.preventDefault()
         newsService
             .contact(newsForm)
-            .then(res => {
+            .then(() => {
                 refreshNews()
-                console.log(res)
+                closeModal()
             })
             .catch(err => console.log(err))
     }
