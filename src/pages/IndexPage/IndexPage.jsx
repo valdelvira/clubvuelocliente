@@ -134,8 +134,6 @@ const IndexPage = () => {
                                     </div>
                                 </div>
                             </Col>
-
-
                             <Col>
 
                                 <div className="a-box">
@@ -151,14 +149,9 @@ const IndexPage = () => {
                                         <h3>Remolque en nuestra Pawnee</h3>
                                         <div>
                                             Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
-                                        <div className="text-container">
-                                            <h3>Remolque en nuestra Pawnee</h3>
-                                            <div>
-                                                Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
 
                                         </div>
                                     </div>
-                                </div>
                                 </div>
 
                             </Col >
