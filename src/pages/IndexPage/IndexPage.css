@@ -8,12 +8,7 @@
     justify-content: center!important;
     align-items: center!important;
     color: white;
-    padding-bottom: 200px;
-  
-}
-
-.index-page .mb{
-    margin-bottom: 80px;
+    padding-bottom: 200px; 
 }
 
 .index-page .blue {
@@ -38,6 +33,7 @@
     color: #00a9ff;
     width: 400px;
     margin: 20px auto;
+    border-top: 2px solid #00a9ff;
     
     
 }
@@ -70,6 +66,7 @@
 
 /* -----------------------------  INDEX NEWS  -----------------------------*/
 
+
 .index-page .newsTitle {
     display: flex;
     justify-content: center!important;
@@ -96,6 +93,12 @@
 .index-page .newsCard {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     border-radius: 20px;
+    height: 100%;
+}
+
+.card-img, .card-img-bottom {
+  width: 100%;
+  height: 20rem;
 }
 
 .index-page .newsCard:hover {
@@ -170,7 +173,7 @@
 
 .index-page .prices-info p {
 
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .index-page .prices-card {
@@ -225,6 +228,15 @@
   right: 10px;
 }
 
+.index-page .facebook {
+  display: flex;
+  justify-content: center;
+}
+
+.index-page .twitter {
+  display: flex;
+  justify-content: center;
+}
 
 
 

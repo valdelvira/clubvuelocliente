@@ -15,16 +15,16 @@ import pawnee from './img/pawnee.jpeg'
 
 const IndexPage = () => {
 
+
     return (
         <>
             <div className="index-page">
-                <UserMessage />
 
                 <div className="mb">
                     <section className="hero parallax">
                         <Row >
                             <Col>
-                                <br /><br />
+                                <br /><br /><br /><br />
                                 <h1 className="center">Club de Vuelo UPM</h1>
                                 <h2 className="center">Akaflieg Madrid</h2>
                                 <p>La primera asociación universitaria en España dedicada a la ingeniería del vuelo a vela</p>
@@ -36,7 +36,6 @@ const IndexPage = () => {
 
                     </section>
                 </div>
-
                 <Container >
                     <section className="newsSection">
                         <Row>
@@ -146,12 +145,20 @@ const IndexPage = () => {
                                                 <img src={pawnee} />
                                             </div>
                                         </div>
+
+                                    </div>
+                                    <div className="text-container">
+                                        <h3>Remolque en nuestra Pawnee</h3>
+                                        <div>
+                                            Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
                                         <div className="text-container">
                                             <h3>Remolque en nuestra Pawnee</h3>
                                             <div>
                                                 Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
+
                                         </div>
                                     </div>
+                                </div>
                                 </div>
 
                             </Col >
@@ -160,7 +167,9 @@ const IndexPage = () => {
                         <div className="prices-info">
                             <Row>
                                 <h3 className="center">Tarifas</h3>
+                                <hr />
                                 <p className="center">Actualizadas a Septiembre de 2018</p>
+
                                 <Col>
                                     <div className="prices-card">
 
@@ -173,7 +182,7 @@ const IndexPage = () => {
                                     </div>
 
                                 </Col>
-                                <Col>
+                                <Col >
                                     <div className="prices-card">
                                         <p className="blue center">Tarifas vuelo:</p>
                                         <ul>
@@ -191,13 +200,14 @@ const IndexPage = () => {
 
                     <section>
 
-                        <Row><h2 className="center mb">Redes Sociales</h2></Row>
+                        <h2 className="center">Redes Sociales</h2>
+                        <hr />
                         <Row>
-                            <Col className="facebook"><Facebook></Facebook></Col>
+                            <Col className="facebook"><Facebook ></Facebook></Col>
 
                             <Col className="twitter"><Twitter></Twitter></Col>
                         </Row>
-                    </section>
+                    </section >
 
                 </Container >
             </div >

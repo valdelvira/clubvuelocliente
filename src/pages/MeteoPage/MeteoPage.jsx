@@ -6,6 +6,7 @@ const MeteoPage = () => {
     return (
         <Container className='meteoContainer'>
             <h1>Meteo</h1>
+            <hr />
             <Row>
                 <Col>
                     <h3>TopMeteo</h3>

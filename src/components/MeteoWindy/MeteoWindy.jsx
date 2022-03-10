@@ -7,7 +7,6 @@ const MeteoWindy = () => {
     var L = window.L;
     var windyInit = window.windyInit;
 
-
     const options = {
         key: 'IZd7hCFpSvtoCtbSkoJENO0MdLJFsUuO',
         verbose: true,
@@ -29,6 +28,7 @@ const MeteoWindy = () => {
     return (
         <Container>
             <div id="windy" style={{
+                width: '100%',
                 height: '600px'
             }}
             ></div>

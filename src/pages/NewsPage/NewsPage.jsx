@@ -25,27 +25,29 @@ function ListNews() {
     }
     return (
         <>
-            <Container className="mt-4">
-                <Row className=" mb-5 justify-content-space-between">
-                    <Col md={8}>
-                        <h1>Noticias</h1>
-                    </Col>
-                    <Col md="auto">
-                        { user?.role === 'ADMIN' && <Button  className="justify-content-end" onClick={ handleModalOpen }>+ Crear noticia</Button> }
-                    </Col>
-                </Row>
-                <Row>
-                    {!news.length ? <LoadingSpinner /> : <NewsList news={news} />}
-                </Row>
-            </Container>
-            <Modal show={showModal} onHide={handleModalClose} size="lg">
-                <Modal.Header closeButton>
-                    <Modal.Title>Crear noticia</Modal.Title>
-                </Modal.Header >
-                <Modal.Body>
-                    <CreateNew refreshNews={loadNews} closeModal={handleModalClose} />
-                </Modal.Body>
-            </Modal>
+            <div className='news-page'>
+                <Container className="mt-4">
+                    <Row className=" mb-5 justify-content-space-between">
+                        <Col md={8}>
+                            <h1>Noticias</h1>
+                        </Col>
+                        <Col md="auto">
+                            {user?.role === 'ADMIN' && <Button className="justify-content-end bg-blue" onClick={handleModalOpen}>Crear noticia</Button>}
+                        </Col>
+                    </Row>
+                    <Row>
+                        {!news.length ? <LoadingSpinner /> : <NewsList news={news} />}
+                    </Row>
+                </Container>
+                <Modal show={showModal} onHide={handleModalClose} size="lg">
+                    <Modal.Header closeButton>
+                        <Modal.Title>Crear noticia</Modal.Title>
+                    </Modal.Header >
+                    <Modal.Body>
+                        <CreateNew refreshNews={loadNews} closeModal={handleModalClose} />
+                    </Modal.Body>
+                </Modal>
+            </div>
         </>
     )
 }
