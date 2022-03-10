@@ -3,3 +3,20 @@
     padding: 5px;
     margin-top: 5px;
 }
+
+.single-news img {
+    width: 300px;
+}
+
+.news-page .bg-blue {
+    background-color: #00a9ff;
+    border: white;
+    margin: 0 auto;
+
+}
+
+.news-page .bg-blue:hover {
+    background-color: white;
+    border:1px solid #00a9ff;
+    color: #00a9ff;
+}

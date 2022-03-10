@@ -146,18 +146,11 @@ const IndexPage = () => {
                                                 <img src={pawnee} />
                                             </div>
                                         </div>
-<<<<<<< HEAD
-                                        <div className="text-container">
-                                            <h3>Remolque en nuestra Pawnee</h3>
-                                            <div>
-                                                Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
-=======
                                     </div>
-                                    <div class="text-container">
+                                    <div className="text-container">
                                         <h3>Remolque en nuestra Pawnee</h3>
                                         <div>
                                             Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
->>>>>>> refs/remotes/origin/main
                                         </div>
                                     </div>
                                 </div>
@@ -168,6 +161,7 @@ const IndexPage = () => {
                         <div className="prices-info">
                             <Row>
                                 <h3 className="center">Tarifas</h3>
+                                <hr />
                                 <p className="center">Actualizadas a Septiembre de 2018</p>
                                 <Col>
                                     <div className="prices-card">
@@ -198,18 +192,14 @@ const IndexPage = () => {
                     </section >
 
                     <section>
-<<<<<<< HEAD
-                        <h2 className="center mb">Redes Sociales</h2>
-=======
 
                         <Row><h2 classNameName="center mb">Redes Sociales</h2></Row>
->>>>>>> refs/remotes/origin/main
                         <Row>
                             <Col className="facebook"><Facebook></Facebook></Col>
 
                             <Col className="twitter"><Twitter></Twitter></Col>
                         </Row>
-                    </section>
+                    </section >
 
                 </Container >
             </div >

@@ -20,7 +20,7 @@ const NewsCard = ({ _id, title, description, imgURL }) => {
                             {description?.substring(0, 200)}
                         </div>
                         <Link to={`/news/${_id}`}>
-                            <Button variant="primary">Leer más</Button>
+                            <Button className="bg-blue">Leer más</Button>
                         </Link>
                     </div>
                 </div>

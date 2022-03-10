@@ -61,7 +61,7 @@ const SignUpForm = () => {
     }
 
     return (
-        <div className="signform">
+        <div className="sign-in-form">
             <Form onSubmit={handleSubmit}>
 
                 <Form.Group className="mb-3">

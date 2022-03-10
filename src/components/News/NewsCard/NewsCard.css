@@ -47,3 +47,16 @@
   color: #00a9ff;
   font-size: 18px;
 }
+
+.news-card .bg-blue {
+    background-color: #00a9ff;
+    border: white;
+    margin: 0 auto;
+
+}
+
+.news-card .bg-blue:hover {
+    background-color: white;
+    border:1px solid #00a9ff;
+    color: #00a9ff;
+}
