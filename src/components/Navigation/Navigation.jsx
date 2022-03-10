@@ -36,9 +36,6 @@ const Navigation = () => {
                                 <NavLink to="/sponsors">
                                     <NavDropdown.Item as="span">Sponsors</NavDropdown.Item>
                                 </NavLink>
-                                <NavLink to="#">
-                                    <NavDropdown.Item as="span">Precios</NavDropdown.Item>
-                                </NavLink>
                                 <NavLink to="/contact">
                                     <NavDropdown.Item as="span">Contacto</NavDropdown.Item>
                                 </NavLink>
