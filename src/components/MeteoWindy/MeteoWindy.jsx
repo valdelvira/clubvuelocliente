@@ -22,6 +22,7 @@ const MeteoWindy = () => {
         zoom: 5
     }
 
+<<<<<<< HEAD
     status1 === "ready" && status2 === 'ready' && (
 
         windyInit(options, windyAPI => {
@@ -58,6 +59,27 @@ const MeteoWindy = () => {
             height: '550px'
         }}
         ></div>
+=======
+    windyInit(options, windyAPI => {
+
+        const { map } = windyAPI;
+
+        L.popup()
+            .setLatLng([39.716361347655884, - 3.3161177261788315])
+            .setContent('Aeródromo de Lillo')
+            .openOn(map);
+    })
+
+    return (
+        <Container>
+            <div id="windy" style={{
+                width: '50%',
+                height: '600px'
+            }}
+            ></div>
+        </Container>
+
+>>>>>>> refs/remotes/origin/main
     )
 }
 

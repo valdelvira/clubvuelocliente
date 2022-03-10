@@ -6,6 +6,8 @@ import EventList from '../../components/Events/EventList'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import { AuthContext } from '../../context/auth.context'
 
+import './EventsPage.css'
+
 
 const EventsPage = () => {
 
@@ -28,17 +30,17 @@ const EventsPage = () => {
     }
 
     return (
-        <Container className="mt-4">
-            <Row className=" mb-5 justify-content-space-between">
+        <Container className="mt-4 events-page">
+            <Row className=" mb-5">
                 <Col md={8}>
-                    <h1>Eventos</h1>
+                    <h1 className="center">Eventos</h1>
                 </Col>
                 <Col md="auto">
-                    { user?.role === 'ADMIN' && <Button  className="justify-content-end" onClick={handleModalFormOpen}>+ Crear evento</Button> }
+                    {user?.role === 'ADMIN' && <Button className="bg-blue " onClick={handleModalFormOpen}>Crear evento</Button>}
                 </Col>
             </Row>
             <Row>
-                { !events.length ? <LoadingSpinner /> : <EventList events={events} refreshEvents={loadEvents} />}
+                {!events.length ? <LoadingSpinner /> : <EventList events={events} refreshEvents={loadEvents} />}
             </Row>
 
             <Modal show={showModal} onHide={handleModalFormClose} size="lg">

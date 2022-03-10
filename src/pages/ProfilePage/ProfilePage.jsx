@@ -26,7 +26,7 @@ const ProfilePage = () => {
 
     return (
         <Container>
-            Bienvenido al perfil de {profile.username}  <Profile {...profile} refreshProfile={loadProfile} />
+            <Profile {...profile} refreshProfile={loadProfile} />
         </Container>
     )
 }

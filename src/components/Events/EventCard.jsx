@@ -47,18 +47,26 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
 
     return (
         <>
-            <Col key={_id}>
-                <Card className='EventCard' style={{ width: '18rem' }}>
-                    <Card.Img src={imgURL} />
-                    <Card.Body>
-                        <Card.Title>{title}</Card.Title>
-                        <Card.Text>
-                            {description}
-                        </Card.Text>
-                        <Button variant="primary" onClick={handleModalOpen}>Detalles</Button>
-                    </Card.Body>
-                </Card>
-            </Col>
+            <Container className="event-card">
+                <Col key={_id}>
+                    <div className="a-box ">
+                        <div className="img-container ">
+                            <div className="img-inner">
+                                <div className="inner-skew">
+                                    <img src={imgURL} />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-container">
+                            <h3>{title}</h3>
+                            <div>
+                                {description?.substring(0, 200)}
+                            </div>
+                            <Button className="bg-blue" onClick={handleModalOpen}>Detalles</Button>
+                        </div>
+                    </div>
+                </Col>
+            </Container>
             <Modal show={showModal} onHide={handleModalClose} size="lg" >
 
                 <Container>
@@ -73,10 +81,20 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     {description}
                                     <hr />
                                     {
+<<<<<<< HEAD
                                         participants?.some(elem => elem?._id === user?._id) ?
                                             <Button variant="warning" onClick={() => popEvent(user?._id)}>Anular</Button>
                                             :
                                             <Button variant="primary" onClick={joinEvent}>Unirse</Button>
+=======
+                                        isLoggedIn ?
+                                            participants?.some(elem => elem?._id === user?._id) ?
+                                                <Button variant="warning" onClick={() => popEvent(user?._id)}>Anular</Button>
+                                                :
+                                                <Button variant="primary" onClick={joinEvent}>Unirse</Button>
+                                            :
+                                            null
+>>>>>>> refs/remotes/origin/main
                                     }
                                     <hr></hr>
                                     <span className="big">Listado de participantes</span>
@@ -102,9 +120,15 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     }
                                 </Card.Text>
                                 <Stack gap={3}>
+<<<<<<< HEAD
                                     {user?.role === 'ADMIN' && <Button variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
                                     <Link to={`/events/${_id}/edit`}>
                                         {user?.role === 'ADMIN' && <Button variant="warning">Editar </Button>}
+=======
+                                    {user?.role === 'ADMIN' && <Button style={{ width: '50%' }} variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
+                                    <Link to={`/events/${_id}/edit`} style={{ display: 'block' }}>
+                                        {user?.role === 'ADMIN' && <Button style={{ width: '50%', display: 'block' }} variant="warning">Editar </Button>}
+>>>>>>> refs/remotes/origin/main
                                     </Link>
                                 </Stack>
                             </Card.Body >

@@ -25,10 +25,48 @@ const Navigation = () => {
                     </NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
+<<<<<<< HEAD
                         <Nav>
                             <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
                                 <NavLink to="/what-is">
                                     <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>
+=======
+                    <Nav>
+                        <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
+                            <NavLink to="/what-is">
+                                <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>
+                            </NavLink>
+                            <NavLink to="/projects">
+                                <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>
+                            </NavLink>
+                            <NavLink to="/sponsors">
+                                <NavDropdown.Item as="span">Sponsors</NavDropdown.Item>
+                            </NavLink>
+                            <NavLink to="#">
+                                <NavDropdown.Item as="span">Precios</NavDropdown.Item>
+                            </NavLink>
+                            <NavLink to="/contact">
+                                <NavDropdown.Item as="span">Contacto</NavDropdown.Item>
+                            </NavLink>
+                        </NavDropdown>
+
+                        <NavLink to="/meteo">
+                            <Nav.Link as="span">Meteo</Nav.Link>
+                        </NavLink>
+
+                        <NavLink to="/news">
+                            <Nav.Link as="span">Noticias</Nav.Link>
+                        </NavLink>
+
+                        <NavLink to="/events">
+                            <Nav.Link as="span" >Eventos</Nav.Link>
+                        </NavLink>
+                        {
+                            user?.role === 'ADMIN' ?
+
+                                <NavLink to="/profile">
+                                    <Nav.Link as="span" >Usuarios</Nav.Link>
+>>>>>>> refs/remotes/origin/main
                                 </NavLink>
                                 <NavLink to="/projects">
                                     <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>

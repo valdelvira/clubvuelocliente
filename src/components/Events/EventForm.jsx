@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import eventService from "../../services/event.service"
 import uploadService from "../../services/upload.service"
+import './EventCard.css'
 
 const EventForm = ({ closeModal, refreshEvents }) => {
 
@@ -55,7 +56,7 @@ const EventForm = ({ closeModal, refreshEvents }) => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="create-event-form">
             <Form.Group className="mb-4">
                 <Form.Label>Título</Form.Label>
                 <Form.Control type="text" name="title" value={EventForm.title} onChange={handleInputChange} />
@@ -71,7 +72,7 @@ const EventForm = ({ closeModal, refreshEvents }) => {
                 <Form.Control type="file" name='imgURL' onChange={uploadEventImage} />
             </Form.Group>
 
-            <Button variant="dark" type="submit" style={{ width: '100%' }} disabled={loadingImage}>
+            <Button className="bg-blue" type="submit" style={{ width: '100%' }} disabled={loadingImage}>
                 {loadingImage ? 'Espere...' : 'Crear evento'}
             </Button>
 
