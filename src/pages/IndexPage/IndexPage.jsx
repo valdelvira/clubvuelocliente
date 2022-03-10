@@ -50,11 +50,10 @@ const IndexPage = () => {
                                     <Card.Body >
                                         <Card.Title className="center blue">Sommertreffen 2019</Card.Title>
                                         <Card.Text >
-                                            12 Sep , 2019
-                                            <br />
+                                            <p className="center">12 Sep , 2019</p>
                                             Desde el Club de Vuelo, entre muchas otras cosas, buscamos fomentar la cultura aeronáutica a través nuestra participación y organización de actividades</Card.Text>
                                         <Link to={`/news`}>
-                                            <Button>Leer más</Button>
+                                            <Button className="bg-blue center">Leer más</Button>
                                         </Link>
                                     </Card.Body>
                                 </Card>
@@ -65,12 +64,11 @@ const IndexPage = () => {
                                     <Card.Body className="">
                                         <Card.Title className="center blue">Cursillo ATC IVAO</Card.Title>
                                         <Card.Text>
-                                            16 Mar , 2019
-                                            <br />
+                                            <p className="center">16 Mar , 2019</p>
                                             Como ya empieza a ser tradición, este año hemos vuelto a participar en la reunión de Akafliegs organizada en Alemania todos los veranos, ¡esta vez como
                                         </Card.Text>
                                         <Link to={`/news`}>
-                                            <Button >Leer más</Button>
+                                            <Button className="bg-blue center">Leer más</Button>
                                         </Link>
                                     </Card.Body>
                                 </Card>
@@ -81,11 +79,10 @@ const IndexPage = () => {
                                     <Card.Body className="">
                                         <Card.Title className="center blue">Impresora 3D</Card.Title>
                                         <Card.Text>
-                                            13 Mar , 2019
-                                            <br />
+                                            <p className="center">13 Mar , 2019</p>
                                             A medida que avanzábamos en los proyectos, se hacia más y más evidente la necesidad de poder fabricar distintos moldes y piezas para los proyectos, por lo que</Card.Text>
                                         <Link to={`/news`}>
-                                            <Button>Leer más</Button>
+                                            <Button className="bg-blue center">Leer más</Button>
                                         </Link>
                                     </Card.Body>
                                 </Card>
@@ -137,11 +134,6 @@ const IndexPage = () => {
                                             Si por el contrario prefieres volar solo en nuestro avión monoplaza de la Akaflieg Braunschweig, SB-5 Danzig, te costará <strong>0.30€/min</strong>.                                    </div>
                                     </div>
                                 </div>
-                                <div className="text-container">
-                                    <h3>Vuelo en SB-5</h3>
-                                    <div>
-                                        Si por el contrario prefieres volar solo en nuestro avión monoplaza de la Akaflieg Braunschweig, SB-5 Danzig, te costará <strong>0.30€/min</strong>.                                    </div>
-                                </div>
                             </Col>
 
 
@@ -154,21 +146,52 @@ const IndexPage = () => {
                                                 <img src={pawnee} />
                                             </div>
                                         </div>
-                                        <div class="text-container">
-                                            <h3>Remolque en nuestra Pawnee</h3>
-                                            <div>
-                                                Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
+                                    </div>
+                                    <div class="text-container">
+                                        <h3>Remolque en nuestra Pawnee</h3>
+                                        <div>
+                                            Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
                                         </div>
                                     </div>
                                 </div>
 
                             </Col >
-
-
                         </Row >
+
+                        <div className="prices-info">
+                            <Row>
+                                <h3 className="center">Tarifas</h3>
+                                <p className="center">Actualizadas a Septiembre de 2018</p>
+                                <Col>
+                                    <div className="prices-card">
+
+                                        <p className="blue center">Cuotas anuales:</p>
+                                        <ul >
+                                            <li className="center">Cuota anual miembro no egresado de nuevo ingreso: 10€</li>
+                                            <li className="center">Cuota anual miembro no egresado: 15€</li>
+                                            <li className="center">Cuota anual miembro egresado y/o no UPM: 40€</li>
+                                        </ul>
+                                    </div>
+
+                                </Col>
+                                <Col>
+                                    <div className="prices-card">
+                                        <p className="blue center">Tarifas vuelo:</p>
+                                        <ul>
+                                            <li className="center">Minuto de vuelo socios no Akaflieg en K7: 0,20 €/min*</li>
+                                            <li className="center">Minuto de vuelo socios no Akaflieg en SB-5: 0,30 €/min*</li>
+                                            <li className="center">Minuto de vuelo socios Akaflieg: 0€/min</li>
+                                            <li className="center">Precio remolque a motor (500m): 36€</li>
+                                        </ul>
+                                    </div>
+                                </Col>
+
+                            </Row>
+                        </div>
                     </section >
 
                     <section>
+
                         <Row><h2 classNameName="center mb">Redes Sociales</h2></Row>
                         <Row>
                             <Col classNameName="facebook"><Facebook></Facebook></Col>
@@ -184,3 +207,4 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+

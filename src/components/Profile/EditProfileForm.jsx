@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap'
 import profileService from '../../services/profile.service'
 import uploadService from '../../services/upload.service'
 import { AuthContext } from '../../context/auth.context'
+import './Profile.css'
 
 
 const EditProfileForm = ({ closeModal, refreshProfile }) => {
@@ -67,33 +68,35 @@ const EditProfileForm = ({ closeModal, refreshProfile }) => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <div className='profile-modal'>
+            <Form onSubmit={handleSubmit}>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" value={profileForm.email} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" name="email" value={profileForm.email} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Horas de vuelo</Form.Label>
-                <Form.Control type="number" name="flightHours" value={profileForm.flightHours} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Horas de vuelo</Form.Label>
+                    <Form.Control type="number" name="flightHours" value={profileForm.flightHours} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Sobre mí</Form.Label>
-                <Form.Control as="textarea" rows={4} type="text" name="aboutMe" value={profileForm.aboutMe} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Sobre mí</Form.Label>
+                    <Form.Control as="textarea" rows={4} type="text" name="aboutMe" value={profileForm.aboutMe} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Foto de perfil</Form.Label>
-                <Form.Control type="file" name='imageURL' onChange={uploadProfileImage} disabled={loadingImage} />
-            </Form.Group>
+                <Form.Group controlId="formFile" className="mb-3">
+                    <Form.Label>Foto de perfil</Form.Label>
+                    <Form.Control type="file" name='imageURL' onChange={uploadProfileImage} disabled={loadingImage} />
+                </Form.Group>
 
-            <Button variant="dark" type="submit" style={{ width: '100%' }}>
-                {loadingImage ? 'Espere...' : 'Editar perfil'}
-            </Button>
+                <Button type="submit" className='bg-blue'>
+                    {loadingImage ? 'Espere...' : 'Editar perfil'}
+                </Button>
 
-        </Form>
+            </Form>
+        </div>
     )
 }
 export default EditProfileForm

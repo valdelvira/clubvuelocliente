@@ -1,10 +1,137 @@
-.profileCard {
-    width: 30rem;
-    height: 30rem;
+.profile-page .bg-blue {
+    background-color: #00a9ff;
+    border: white;
+    width: 150px;
+    padding: 10px;
+}
+.border-blue {
+    border: 1px solid #00a9ff;
 }
 
-.photoProfile {
+
+.profile-page hr {
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    color: #00a9ff;
+    width: 220px;
+    margin: 20px auto;
     
-    height: 480px;
+    
+}
+
+.profile-page .bg-blue:hover {
+    background-color: white;
+    border:1px solid #00a9ff;
+    color: #00a9ff;
+}
+
+
+.profile-modal .bg-blue {
+    background-color: #00a9ff;
+    border: white;
+    width: 150px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+.profile-modal hr {
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    color: #00a9ff;
+    width: 220px;
+    margin: 20px auto;
+    
+    
+}
+
+.profile-modal .bg-blue:hover {
+    background-color: white;
+    border:1px solid #00a9ff;
+    color: #00a9ff;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:900,300);
+
+.profile-page img {
+    object-fit: cover;
+}
+.profile-page .container {
+  width: 600px;
+  margin: 120px auto 120px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  text-align: center;
+}
+.profile-page .container:hover .avatar-flip {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.profile-page .container:hover .avatar-flip img:first-child {
+  opacity: 0;
+}
+.profile-page .container:hover .avatar-flip img:last-child {
+  opacity: 1;
+}
+.profile-page .avatar-flip {
+  border-radius: 100px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  margin: auto;
+  top: -60px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 13px #f0f0f0;
+  -webkit-box-shadow: 0 0 0 13px #f0f0f0;
+  -moz-box-shadow: 0 0 0 13px #f0f0f0;
+}
+.profile-page .avatar-flip img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+.profile-page .avatar-flip img:first-child {
+  z-index: 1;
+}
+.profile-page .avatar-flip img:last-child {
+  z-index: 0;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  opacity: 0;
+}
+.profile-page h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+.profile-page h4 {
+  font-size: 13px;
+  color: #00baff;
+  letter-spacing: 1px;
+  margin-bottom: 25px
+}
+.profile-page p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: #666;
 }
 
