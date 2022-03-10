@@ -1,13 +1,11 @@
-import { Container, Modal, Row } from 'react-bootstrap'
-import { AuthContext } from '../../context/auth.context'
-import { useState, useEffect, useContext } from 'react'
+import { Container, Row } from 'react-bootstrap'
+import { useState, useEffect } from 'react'
 import profileService from '../../services/profile.service'
 import UsersList from './../../components/UsersList/UsersList'
 import LoadingSpinner from './../../components/LoadingSpinner/LoadingSpinner'
 
 function UserListPage() {
     const [usersList, setUserList] = useState([])
-    const { isLoggedIn, user, logOutUser } = useContext(AuthContext)
     useEffect(() => { loadUserList() }, [])
 
     const loadUserList = () => {

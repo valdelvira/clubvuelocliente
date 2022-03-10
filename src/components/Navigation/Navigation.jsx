@@ -25,7 +25,7 @@ const Navigation = () => {
                     </NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
-                    <Nav  className="me-auto">
+                    <Nav>
                         <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
                             <NavLink to="/what-is">
                                 <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>

@@ -49,7 +49,7 @@ const SignUpForm = () => {
     function handleSubmit(e) {
 
         e.preventDefault()
-
+        console.log(signUpForm)
         authService
             .signup(signUpForm)
             .then(() => {
