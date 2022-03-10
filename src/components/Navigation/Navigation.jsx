@@ -18,12 +18,14 @@ const Navigation = () => {
 
     return (
         <>
-            <Navbar bg="light" variant="light" className='navigator' sticky='top'>
+            <Navbar bg="light" variant="light" className='navigator' sticky='top'  expand="lg">
                 <Container>
                     <NavLink to="/">
                         <Image src={logo} />
                     </NavLink>
-                    <Nav>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
+                    <Nav  className="me-auto">
                         <NavDropdown title="Akaflieg Madrid" id="navbarScrollingDropdown">
                             <NavLink to="/what-is">
                                 <NavDropdown.Item as="span">¿Qué es un Akaflieg?</NavDropdown.Item>
@@ -31,7 +33,7 @@ const Navigation = () => {
                             <NavLink to="/projects">
                                 <NavDropdown.Item as="span">Proyectos</NavDropdown.Item>
                             </NavLink>
-                            <NavLink to="#">
+                            <NavLink to="/sponsors">
                                 <NavDropdown.Item as="span">Sponsors</NavDropdown.Item>
                             </NavLink>
                             <NavLink to="#">
@@ -82,6 +84,7 @@ const Navigation = () => {
                         }
 
                     </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar >
 

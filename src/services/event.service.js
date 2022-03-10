@@ -40,8 +40,8 @@ class EventService {
         return this.api.put(`/${id}/join`)
     }
 
-    quitEvent(id) {
-        return this.api.put(`/${id}/quit`)
+    quitEvent(id, user_id) {
+        return this.api.put(`/${id}/${user_id}/quit`)
     }
 }
 

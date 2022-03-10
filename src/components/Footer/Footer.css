@@ -1,4 +1,6 @@
-footer {
+
+.contFooter {
+    margin-top: 40px;
     background-color: #f8f9fa;
     color: black;
     font-size: .6em;
@@ -6,8 +8,6 @@ footer {
     padding: 6px;
     bottom: 0;
     width: 100%;
-}
-
-.contFooter {
-    margin-top: 40px;
+    z-index: auto;
+    position: fixed;
 }

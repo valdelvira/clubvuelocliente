@@ -1,9 +1,16 @@
 .userPhoto{
     height: 3.5rem;
     border-radius: 40%;
+    margin-right: 10px;
 }
 
 .participantCard{
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.big{
+    font-size: 1.5em;
+    display: block;
     margin-bottom: 10px;
 }

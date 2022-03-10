@@ -2,10 +2,8 @@ import UserMessage from "../../components/UserMessage/UserMessage"
 import { Container, Button, Row, Col, Image, Card, NavLink } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './IndexPage.css'
-import NewsCard from "../../components/News/NewsCard/NewsCard"
 import Facebook from "../../components/Facebook/Facebook"
 import Twitter from "../../components/Twitter/Twitter"
-
 import news1 from './img/imgNoticia1.jpeg'
 import news2 from './img/imgNoticia2.jpeg'
 import news3 from './img/imgNoticia3.jpeg'
@@ -94,7 +92,7 @@ const IndexPage = () => {
                             </Col>
 
                         </Row>
-                    </section>
+                    </section >
                     <section className="prices">
 
                         <div className="prices-title">
@@ -139,41 +137,48 @@ const IndexPage = () => {
                                             Si por el contrario prefieres volar solo en nuestro avión monoplaza de la Akaflieg Braunschweig, SB-5 Danzig, te costará <strong>0.30€/min</strong>.                                    </div>
                                     </div>
                                 </div>
-                            </Col>
-
-                            <Col>
-
-                                <div class="a-box">
-                                    <div class="img-container">
-                                        <div class="img-inner">
-                                            <div class="inner-skew">
-                                                <img src={pawnee} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-container">
-                                        <h3>Remolque en nuestra Pawnee</h3>
-                                        <div>
-                                            Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
-                                    </div>
+                                <div className="text-container">
+                                    <h3>Vuelo en SB-5</h3>
+                                    <div>
+                                        Si por el contrario prefieres volar solo en nuestro avión monoplaza de la Akaflieg Braunschweig, SB-5 Danzig, te costará <strong>0.30€/min</strong>.                                    </div>
                                 </div>
                             </Col>
 
 
-                        </Row>
-                    </section>
+                            <Col>
+
+                                <div className="a-box">
+                                    <div className="img-container">
+                                        <div className="img-inner">
+                                            <div className="inner-skew">
+                                                <img src={pawnee} />
+                                            </div>
+                                        </div>
+                                        <div class="text-container">
+                                            <h3>Remolque en nuestra Pawnee</h3>
+                                            <div>
+                                                Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </Col >
+
+
+                        </Row >
+                    </section >
 
                     <section>
-                        <Row><h2 className="center mb box">Redes Sociales</h2></Row>
+                        <Row><h2 classNameName="center mb">Redes Sociales</h2></Row>
                         <Row>
-                            <Col className="facebook"><Facebook></Facebook></Col>
+                            <Col classNameName="facebook"><Facebook></Facebook></Col>
 
-                            <Col className="twitter"><Twitter></Twitter></Col>
+                            <Col classNameName="twitter"><Twitter></Twitter></Col>
                         </Row>
                     </section>
 
-                </Container>
-            </div>
+                </Container >
+            </div >
         </>
     )
 }
