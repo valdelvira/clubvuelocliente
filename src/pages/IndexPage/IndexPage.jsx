@@ -146,12 +146,9 @@ const IndexPage = () => {
 
                                     </div>
                                     <div className="text-container">
+                                        <h3>Remolque en nuestra Pawnee</h3>
                                         <div>
                                             Llegado a este punto te preguntarás cómo vuelan estos aviones si no tienen motor... Para ello necesitamos que otro avión nos remolque y todo esto cuesta 36€ más.
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
                                         </div>
                                     </div>
                                 </div>
