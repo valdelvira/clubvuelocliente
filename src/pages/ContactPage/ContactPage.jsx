@@ -23,6 +23,7 @@ function ContactPage() {
             <Row className="justify-content-md-center">
 
                 <h2>¿Dónde estamos?</h2>
+                <hr />
                 <Col md={6}>
                     <section>
                         <h5>Lunes – Viernes</h5>
