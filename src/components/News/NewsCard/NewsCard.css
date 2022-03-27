@@ -64,4 +64,6 @@
 .news-card .leer-mas {
   margin: 20px auto;
   width: 80%;
+.leer-mas {
+  margin: 20px 0!important;
 }

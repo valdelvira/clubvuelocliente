@@ -1,9 +1,10 @@
 import { useState, useContext } from "react"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import eventService from "../../services/event.service"
 import uploadService from "../../services/upload.service"
 import './EventCard.css'
+import './EventForm.css'
 
 const EventForm = ({ closeModal, refreshEvents }) => {
 
@@ -56,27 +57,29 @@ const EventForm = ({ closeModal, refreshEvents }) => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} className="create-event-form">
-            <Form.Group className="mb-4">
-                <Form.Label>Título</Form.Label>
-                <Form.Control type="text" name="title" value={EventForm.title} onChange={handleInputChange} />
-            </Form.Group>
+        <Container className="eventFormContainer">
+            <Form onSubmit={handleSubmit} className="create-event-form">
+                <Form.Group className="mb-4">
+                    <Form.Label>Título</Form.Label>
+                    <Form.Control type="text" name="title" value={EventForm.title} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group className="mb-4">
-                <Form.Label>Descipción del evento</Form.Label>
-                <Form.Control type="text" name="description" value={EventForm.description} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group className="mb-4">
+                    <Form.Label>Descipción del evento</Form.Label>
+                    <Form.Control type="text" name="description" value={EventForm.description} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group controlId="formFile" className="mb-4">
-                <Form.Label>Foto de evento</Form.Label>
-                <Form.Control type="file" name='imgURL' onChange={uploadEventImage} />
-            </Form.Group>
+                <Form.Group controlId="formFile" className="mb-4">
+                    <Form.Label>Foto de evento</Form.Label>
+                    <Form.Control type="file" name='imgURL' onChange={uploadEventImage} />
+                </Form.Group>
 
-            <Button className="bg-blue" type="submit" style={{ width: '100%' }} disabled={loadingImage}>
-                {loadingImage ? 'Espere...' : 'Crear evento'}
-            </Button>
+                <Button className="bg-blue" type="submit" style={{ width: '100%' }} disabled={loadingImage}>
+                    {loadingImage ? 'Espere...' : 'Crear evento'}
+                </Button>
 
-        </Form>
+            </Form>
+        </Container>
     )
 }
 export default EventForm
