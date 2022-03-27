@@ -17,10 +17,10 @@ const NewsCard = ({ _id, title, description, imgURL }) => {
                     <div className="text-container">
                         <h3>{title}</h3>
                         <div>
-                            {description?.substring(0, 200)}
+                            {description?.substring(0, 190)}
                         </div>
                         <Link to={`/news/${_id}`}>
-                            <Button className="bg-blue">Leer más</Button>
+                            <Button className="bg-blue leer-mas">Leer más</Button>
                         </Link>
                     </div>
                 </div>

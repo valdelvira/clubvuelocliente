@@ -60,3 +60,8 @@
     border:1px solid #00a9ff;
     color: #00a9ff;
 }
+
+.news-card .leer-mas {
+  margin: 20px auto;
+  width: 80%;
+}

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import eventService from "../../services/event.service"
 import { Form, Button } from 'react-bootstrap'
 import uploadService from "../../services/upload.service"
+import './EditEvent.css'
 
 
 const EditEventForm = () => {
@@ -65,21 +66,23 @@ const EditEventForm = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} >
+        <Form onSubmit={handleSubmit} className="edit-form" >
             <Form.Group className="mb-3">
-                <Form.Label>Title</Form.Label>
+                <Form.Label className="text-edit-event">Título del evento</Form.Label>
                 <Form.Control type="text" name="title" value={eventForm?.title} onChange={handleInputChange} />
             </Form.Group>
+            <hr />
             <Form.Group className="mb-3">
-                <Form.Label>Description</Form.Label>
+                <Form.Label className="text-edit-event">Descripción</Form.Label>
                 <Form.Control type="text" name="description" value={eventForm?.description} onChange={handleInputChange} />
             </Form.Group>
+            <hr />
             <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Foto del evento</Form.Label>
+                <Form.Label className="text-edit-event">Foto del evento</Form.Label>
                 <Form.Control type="file" name='imgURL' onChange={uploadNewImage} />
             </Form.Group>
 
-            <Button variant="dark" type="submit" style={{ width: '100%' }} disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Editar evento'}</Button>
+            <Button className="bg-blue" disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Editar evento'}</Button>
         </Form >
 
     )

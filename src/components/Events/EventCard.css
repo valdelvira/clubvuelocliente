@@ -67,6 +67,7 @@
 .event-card .bg-blue {
     background-color: #00a9ff;
     border: white;
+    width: 80%;
 }
 
 .event-card .bg-blue:hover {
@@ -93,6 +94,34 @@
     border:1px solid #00a9ff;
     color: #00a9ff;
 }
+
+.event-modal .erase-event{
+    background-color: #ff0000;
+    border: white;
+    border-radius: 20px;
+}
+.event-modal .erase-event:hover {
+    background-color: white;
+    border:1px solid #ff0000;
+    color: #ff0000;
+}
+
+
+ .event-modal .bg-red{
+    background-color: #ff5e00;
+    border: white;
+    margin: 0 auto;
+    margin-left: 20px;
+    border-radius: 20px;
+
+}
+
+ .event-modal .bg-red:hover {
+    background-color: white;
+    border:1px solid #ff5e00;
+    color: #ff5e00;
+}
+
 
 .boton-events {
     margin: 10px 0;

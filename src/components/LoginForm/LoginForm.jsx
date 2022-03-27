@@ -1,8 +1,9 @@
 import { useState, useContext } from "react"
-import { Form, Button, Alert, Stack } from 'react-bootstrap'
+import { Form, Button, Alert, Stack, Nav } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import authService from "../../services/auth.service"
 import { AuthContext } from './../../context/auth.context'
+import { NavLink } from 'react-router-dom'
 
 import './LoginForm.css'
 
@@ -55,14 +56,18 @@ const LoginForm = ({ closeModal }) => {
                 <Form.Group className="mb-4">
                     <Form.Label>Contraseña</Form.Label>
                     <Form.Control type="password" name="password" value={LoginForm.password} onChange={handleInputChange} />
+
                 </Form.Group>
                 <Stack gap={4}>
-                    <Button className="bg-blue">Acceder</Button>
+                    <Button className="bg-blue" type="submit">Acceder</Button>
                     {
                         show && <Alert variant="danger">Usuario o contraseña incorrecta</Alert>
                     }
                 </Stack>
             </Form>
+            <NavLink to={`/signup`}>
+                <p>Hola</p>
+            </NavLink>
         </div >
     )
 }

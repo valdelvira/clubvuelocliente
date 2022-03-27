@@ -3,10 +3,20 @@
 .login-form .bg-blue {
     background-color: #00a9ff;
     border: white;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .login-form .bg-blue:hover {
     background-color: white;
     border:1px solid #00a9ff;
     color: #00a9ff;
+}
+
+.login-form {
+background-color: #f8f9fa;
+border: 1px solid white;
+padding: 20px;
+border-radius: 20px;
+
 }

@@ -67,7 +67,7 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                     </div>
                 </Col>
             </Container>
-            <Modal show={showModal} onHide={handleModalClose} size="lg" >
+            <Modal show={showModal} onHide={handleModalClose} size="lg" className="event-modal">
 
                 <Container>
                     <br />
@@ -85,9 +85,9 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     {
                                         isLoggedIn ?
                                             participants?.some(elem => elem?._id === user?._id) ?
-                                                <Button variant="warning" onClick={() => popEvent(user?._id)}>Anular</Button>
+                                                <Button className="bg-red" style={{ width: '50%' }} onClick={() => popEvent(user?._id)}>Anular</Button>
                                                 :
-                                                <Button variant="primary" onClick={joinEvent}>Unirse</Button>
+                                                <Button className="bg-blue" style={{ width: '50%' }} onClick={joinEvent}>Unirse</Button>
                                             :
                                             null
                                     }
@@ -107,7 +107,7 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
 
                                                             <span>{elem?.name} {elem?.lastName}
 
-                                                                {user?.role === 'ADMIN' && <Button variant="warning" className="boton-anular" style={{ width: '20%' }} onClick={() => popEvent(elem?._id)}>Anular</Button>}
+                                                                {user?.role === 'ADMIN' && <Button className="boton-anular bg-red" style={{ width: '20%' }} onClick={() => popEvent(elem?._id)}>Anular</Button>}
                                                             </span>
                                                         </span>
                                                         <hr />
@@ -119,7 +119,7 @@ const EventCard = ({ title, description, imgURL, participants, _id, refreshEvent
                                     }
                                 </Card.Text>
                                 <Stack gap={3}>
-                                    {user?.role === 'ADMIN' && <Button style={{ width: '50%' }} variant="danger" onClick={deleteEvent}>Borrar evento</Button>}
+                                    {user?.role === 'ADMIN' && <Button style={{ width: '50%' }} className="erase-event" onClick={deleteEvent}>Borrar evento</Button>}
                                     <Link to={`/events/${_id}/edit`} style={{ display: 'block' }}>
                                         {user?.role === 'ADMIN' && <Button style={{ width: '50%', display: 'block' }} variant="warning">Editar </Button>}
                                     </Link>
